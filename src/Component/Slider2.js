@@ -8,8 +8,8 @@ export default function Slider2() {
 
   var settings = {
     dots: false,
-    // autoplay: 300,
-    // speed: 500,
+    autoplay: 200,
+    speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
