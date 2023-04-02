@@ -36,7 +36,7 @@ export default function Footer() {
   const showOptions = () => {
     return degrees.map((item) => {
       return (
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ marginRight: "10px" }}>
           <Typography
             style={{
               fontFamily: "Roboto Slab",

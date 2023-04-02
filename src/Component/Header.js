@@ -120,11 +120,9 @@ export default function Header() {
                 Admission 2022 - 2023
               </Typography>
             </Grid>
-            <Divider
-              orientation="vertical"
-              variant="string"
-              style={{ maxWidth: 360, height: "100%" }}
-            ></Divider>
+            <Grid>
+              <Typography>|</Typography>
+            </Grid>
             <Grid item>
               <Typography
                 sx={{
@@ -165,7 +163,7 @@ export default function Header() {
                   About Us
                 </Button>
                 {showHeadings()}
-                <Menu
+                {/* <Menu
                   id="basic-menu"
                   anchorEl={anchorEl}
                   open={open}
@@ -175,7 +173,7 @@ export default function Header() {
                   }}
                 >
                   {showMenu()}
-                </Menu>
+                </Menu> */}
               </Box>
               <Box sx={{ flexGrow: 1 }} component="div"></Box>
               <Box>

@@ -23,15 +23,21 @@ export default function Slider1() {
 
   const playSlide = () => {
     return images.map((item) => {
-      return <img src={item.image} height={500} />;
+      return (
+        <Grid xs={12} item>
+          <img src={item.image} height={500} width={"100%"} />
+        </Grid>
+      );
     });
   };
 
   return (
-    <React.Fragment>
-      <Slider ref={mySlider} {...settings}>
-        {playSlide()}
-      </Slider>
-    </React.Fragment>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <Slider ref={mySlider} {...settings}>
+          {playSlide()}
+        </Slider>
+      </Grid>
+    </Grid>
   );
 }

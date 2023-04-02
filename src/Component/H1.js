@@ -4,18 +4,18 @@ import { Grid, Typography } from "@mui/material";
 export default function H1() {
   return (
     <Grid container spacing={2}>
-      {/* <Grid
+      <Grid
         item
-        // xs={2}
         sx={{
           height: "250px",
           width: "180px",
           backgroundColor: "#1E73BE0A",
-          // marginTop: "30px",
+          marginTop: "30px",
           borderTopRightRadius: "12px",
           borderBottomRightRadius: "12px",
+          position: "absolute",
         }}
-      ></Grid> */}
+      ></Grid>
       <Grid
         xs={12}
         item
@@ -24,7 +24,6 @@ export default function H1() {
           flexDirection: "row",
           margin: 5,
           justifyContent: "space-between",
-          // position: "absolute",
         }}
       >
         <Grid
@@ -94,7 +93,7 @@ export default function H1() {
           }}
         >
           <img
-            src="/Assets/sbihm/img_1_1628229558197.jpg"
+            src="/Assets/banner.png"
             style={{ height: 350, width: 550, borderRadius: "12px" }}
           />
         </Grid>
