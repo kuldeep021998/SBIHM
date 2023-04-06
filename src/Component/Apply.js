@@ -4,6 +4,14 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
+import InputAdornment from "@mui/material/InputAdornment";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormGroup from "@mui/material/FormGroup";
+import Checkbox from "@mui/material/Checkbox";
+import { blueGrey } from "@mui/material/colors";
 
 export default function Apply() {
   const courses = [
@@ -53,7 +61,7 @@ export default function Apply() {
         item
         xs={12}
         sx={{
-          bgcolor: "#FAF5ED",
+          bgcolor: "#1E73BE14",
           margin: 10,
           padding: 2,
         }}
@@ -86,7 +94,15 @@ export default function Apply() {
           Fill out the application form and our team will get back to you
         </Typography>
 
-        <Grid item sx={{ bgcolor: "#FFFFFF", width: "100%" }}>
+        <Grid
+          item
+          sx={{
+            bgcolor: "#FFFFFF",
+            width: "100%",
+            borderRadius: 2,
+            marginTop: 5,
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -128,7 +144,7 @@ export default function Apply() {
               <InputLabel id="demo-simple-select-label">Courses</InputLabel>
               <Select
                 // value={categoryId}
-                label="Category Name"
+                // label="Category Name"
                 // onChange={(event) => setCategoryId(event.target.value)}
                 // InputProps={{ style: { borderRadius: 50 } }}
                 style={{ borderRadius: 50 }}
@@ -205,6 +221,327 @@ export default function Apply() {
                 />
               </Grid>
             </Grid>
+            <Grid
+              item
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <Grid xs={5} item sx={{ marginTop: "10px" }}>
+                <TextField
+                  placeholder="Date Of Birth"
+                  variant="outlined"
+                  fullWidth
+                  InputProps={{
+                    style: { borderRadius: 50 },
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <CalendarMonthIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+              </Grid>
+              <Grid xs={5} item sx={{ marginTop: "10px" }}>
+                <TextField
+                  label="Blood Group"
+                  variant="outlined"
+                  fullWidth
+                  InputProps={{ style: { borderRadius: 50 } }}
+                />
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sx={{ marginLeft: 2 }}>
+              <Typography
+                sx={{
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "24px",
+                  letterSpacing: "0.02em",
+                  textAlign: "left",
+                  color: "#666666",
+                  marginTop: "10px",
+                }}
+              >
+                Sex :
+              </Typography>
+
+              <FormControl>
+                <RadioGroup
+                  aria-labelledby="demo-radio-buttons-group-label"
+                  defaultValue="male"
+                  row
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel
+                    value="male"
+                    control={<Radio />}
+                    label="Male"
+                  />
+                  <FormControlLabel
+                    value="female"
+                    control={<Radio />}
+                    label="Female"
+                  />
+                  <FormControlLabel
+                    value="other"
+                    control={<Radio />}
+                    label="Other"
+                  />
+                </RadioGroup>
+              </FormControl>
+
+              <Typography
+                sx={{
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "24px",
+                  letterSpacing: "0.02em",
+                  textAlign: "left",
+                  color: "#666666",
+                  marginTop: "10px",
+                }}
+              >
+                Language Known :
+              </Typography>
+
+              <Grid
+                item
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  // justifyContent: "center",
+                  marginTop: 2,
+                }}
+              >
+                <Typography>1</Typography>
+                <TextField
+                  variant="outlined"
+                  // fullWidth
+                  InputProps={{
+                    style: {
+                      borderRadius: 50,
+                      marginLeft: 10,
+                      marginRight: 50,
+                    },
+                    // startAdornment: (
+                    //   <InputAdornment position="start">
+                    //     <CalendarMonthIcon />
+                    //   </InputAdornment>
+                    // ),
+                  }}
+                />
+                <FormGroup row>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Read"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Write"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Speak"
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid
+                item
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  // justifyContent: "center",
+                  marginTop: 2,
+                }}
+              >
+                <Typography>2</Typography>
+                <TextField
+                  variant="outlined"
+                  // fullWidth
+                  InputProps={{
+                    style: {
+                      borderRadius: 50,
+                      marginLeft: 10,
+                      marginRight: 50,
+                    },
+                    // startAdornment: (
+                    //   <InputAdornment position="start">
+                    //     <CalendarMonthIcon />
+                    //   </InputAdornment>
+                    // ),
+                  }}
+                />
+                <FormGroup row>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Read"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Write"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Speak"
+                  />
+                </FormGroup>
+              </Grid>
+              <Grid
+                item
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  // justifyContent: "center",
+                  marginTop: 2,
+                }}
+              >
+                <Typography>3</Typography>
+                <TextField
+                  variant="outlined"
+                  // fullWidth
+                  InputProps={{
+                    style: {
+                      borderRadius: 50,
+                      marginLeft: 10,
+                      marginRight: 50,
+                    },
+                    // startAdornment: (
+                    //   <InputAdornment position="start">
+                    //     <CalendarMonthIcon />
+                    //   </InputAdornment>
+                    // ),
+                  }}
+                />
+                <FormGroup row>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Read"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Write"
+                  />
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        sx={{
+                          color: blueGrey[900],
+                          "&.Mui-checked": {
+                            color: blueGrey[900],
+                          },
+                        }}
+                      />
+                    }
+                    label="Speak"
+                  />
+                </FormGroup>
+              </Grid>
+            </Grid>
+            <TextField
+              variant="outlined"
+              placeholder="Father’s / Guardian’s Name"
+              fullWidth
+              InputProps={{
+                style: {
+                  borderRadius: 50,
+                  marginLeft: 2,
+                  marginTop: 15,
+                },
+              }}
+            />
+            <TextField
+              variant="outlined"
+              placeholder="Guardian’s Mobile No."
+              fullWidth
+              InputProps={{
+                style: {
+                  borderRadius: 50,
+                  marginLeft: 2,
+                  marginTop: 10,
+                  marginBottom: 15,
+                },
+              }}
+            />
           </Grid>
         </Grid>
       </Grid>

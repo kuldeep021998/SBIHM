@@ -65,7 +65,7 @@ export default function Slider3() {
   const playSlide = () => {
     return data.map((item) => {
       return (
-        <Grid item>
+        <Grid item >
           <div
             style={{
               display: "flex",

@@ -10,10 +10,9 @@ export default function H1() {
           height: "250px",
           width: "180px",
           backgroundColor: "#1E73BE0A",
-          marginTop: "30px",
+          marginTop: "50px",
           borderTopRightRadius: "12px",
           borderBottomRightRadius: "12px",
-          position: "absolute",
         }}
       ></Grid>
       <Grid
@@ -21,14 +20,12 @@ export default function H1() {
         item
         sx={{
           display: "flex",
-          flexDirection: "row",
           margin: 5,
-          justifyContent: "space-between",
+          marginTop: -35,
         }}
       >
         <Grid
           item
-          //   xs={6}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -36,8 +33,8 @@ export default function H1() {
             margin: "20px",
           }}
         >
-          <Typography
-            sx={{
+          <div
+            style={{
               fontFamily: "Noto Serif",
               fontSize: "40px",
               fontWeight: 600,
@@ -47,9 +44,9 @@ export default function H1() {
             }}
           >
             We produce excellence
-          </Typography>
-          <Typography
-            sx={{
+          </div>
+          <div
+            style={{
               fontFamily: "DM Sans",
               fontSize: "16px",
               fontWeight: 400,
@@ -66,9 +63,9 @@ export default function H1() {
             hospitality demand and the goal of SBIHM Kharagpur is to give the
             proper professional hospitality education for our students to make
             their bright future, an ISO 9001:2015.
-          </Typography>
-          <Typography
-            sx={{
+          </div>
+          <div
+            style={{
               fontFamily: "DM Sans",
               fontSize: "16px",
               fontWeight: 400,
@@ -79,11 +76,13 @@ export default function H1() {
             }}
           >
             A gateway to your future from here in Kharagpur..
-          </Typography>
+          </div>
         </Grid>
         <Grid
           item
-          //   xs={6}
+          lg={6}
+          // xs={12}
+          sm={6}
           sx={{
             display: "flex",
             justifyContent: "center",

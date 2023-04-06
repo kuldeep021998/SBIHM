@@ -1,8 +1,8 @@
 .Stylesheet_trendingimg {
   /* width: 177px;
     height: 177px; */
-  width: 30%;
-  height: 30%;
+  /* width: 30%;
+  height: 30%; */
   transition: transform 0.1s;
   cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 export default function Count() {
   const data = [
@@ -12,7 +12,6 @@ export default function Count() {
     return data.map((item) => {
       return (
         <Grid
-       
           item
           sx={{
             alignItems: "center",
@@ -22,8 +21,8 @@ export default function Count() {
             margin: 5,
           }}
         >
-          <Typography
-            sx={{
+          <div
+            style={{
               height: 40,
               width: 60,
               backgroundColor: "#1E73BE0A",
@@ -39,9 +38,9 @@ export default function Count() {
           >
             {item.numbers}
             {item.type}
-          </Typography>
-          <Typography
-            sx={{
+          </div>
+          <div
+            style={{
               justifyContent: "center",
               alignItems: "center",
               marginTop: "20px",
@@ -55,17 +54,20 @@ export default function Count() {
             }}
           >
             {item.text}
-          </Typography>
+          </div>
         </Grid>
       );
     });
   };
 
   return (
-    <Grid container spacing={2}>
+    <Grid container>
       <Grid
-        item
         xs={12}
+        lg={12}
+        sm={6}
+        md={6}
+        item
         sx={{
           display: "flex",
           justifyContent: "center",

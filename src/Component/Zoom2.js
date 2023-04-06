@@ -1,102 +1,15 @@
-import React from "react";
-import { Grid, Typography, Paper, Divider } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "../style.css";
 
 export default function Zoom2() {
-  const data = [
-    {
-      id: 1,
-      image: "/Assets/blue.png",
-      coursetext1: "Certificate In Front",
-      coursetext2: "Office Operation",
-    },
-    {
-      id: 2,
-      image: "/Assets/blue.png",
-      coursetext1: "Certificate In Front",
-      coursetext2: "Accomodation Operation",
-    },
-    {
-      id: 3,
-      image: "/Assets/blue.png",
-      coursetext1: "Certificate In Kitchen",
-      coursetext2: "Operation",
-    },
-  ];
-
-  const fetchData = () => {
-    return data.map((item) => {
-      return (
-        <Grid item className="Stylesheet_trendingimg">
-          <Grid item >
-            <img
-              src={item.image}
-              height={200}
-              width={280}
-              style={{
-                borderRadius: 10,
-              }}
-            />
-          </Grid>
-          <Grid item sx={{ marginTop: "-190px" }}>
-            <Typography sx={{ textAlign: "center" }}>
-              {item.coursetext1}
-            </Typography>
-            <Typography sx={{ textAlign: "center" }}>
-              {item.coursetext2}
-            </Typography>
-            <Typography sx={{ textAlign: "center" }}>|</Typography>
-            <Grid
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                marginRight: 5,
-                marginLeft: 5,
-              }}
-            >
-              <Grid>
-                <Typography>Duration</Typography>
-                <Typography sx={{ textAlign: "center" }}>6 months</Typography>
-              </Grid>
-              <Grid>
-                <Typography>Duration</Typography>
-                <Typography sx={{ textAlign: "center" }}>6 months</Typography>
-              </Grid>
-            </Grid>
-            <Grid
-              sx={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
-                marginTop: 2,
-              }}
-            >
-              <Grid
-                sx={{
-                  height: 28,
-                  width: 100,
-                  backgroundColor: "white",
-                  borderRadius: 20,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
-                }}
-              >
-                <Typography>Learn More</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      );
-    });
-  };
-
   return (
     <Grid
       container
-      spacing={2}
-      sx={{ display: "flex", justifyContent: "center" }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
     >
       <Grid item xs={12}>
         <Typography
@@ -111,11 +24,283 @@ export default function Zoom2() {
             marginTop: 10,
           }}
         >
-          Our Degree Courses
+          Our Certificate Courses
         </Typography>
       </Grid>
-      <Grid item sx={{ display: "flex", flexDirection: "row",justifyContent: 'space-between' }}>
-        {fetchData()}
+
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          margin: 5,
+        }}
+      >
+        <Grid className="Stylesheet_trendingimg" sx={{ margin: 2 }}>
+          <img
+            src="/Assets/banner.png"
+            height={200}
+            width={280}
+            style={{
+              borderRadius: 10,
+            }}
+          />
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+              marginTop: "-80px",
+            }}
+          >
+            MBA in Hotel
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            Management
+          </Typography>
+        </Grid>
+        <Grid className="Stylesheet_trendingimg" sx={{ margin: 2 }}>
+          <img
+            src="/Assets/banner.png"
+            height={200}
+            width={280}
+            style={{
+              borderRadius: 10,
+            }}
+          />
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+              marginTop: "-80px",
+            }}
+          >
+            MBA in Hotel
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            Management
+          </Typography>
+        </Grid>
+        <Grid
+          sx={{
+            height: 200,
+            width: 250,
+            backgroundColor: "#1E73BE",
+            padding: 2,
+            borderRadius: "12px",
+            margin: 2,
+          }}
+          className="Stylesheet_trendingimg"
+        >
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            B. Voc in Hotel
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            Management
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            |
+          </Typography>
+          <Grid
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginRight: 2,
+              marginLeft: 2,
+            }}
+          >
+            <Grid>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                }}
+              >
+                Duration
+              </Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontFamily: "DM Sans",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                }}
+              >
+                3 years
+              </Typography>
+            </Grid>
+            <Grid>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: "500",
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                }}
+              >
+                Eligibility
+              </Typography>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontFamily: "DM Sans",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                }}
+              >
+                10 + 2 Passed
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              marginTop: 2,
+            }}
+          >
+            <Grid
+              sx={{
+                height: 28,
+                width: 100,
+                backgroundColor: "white",
+                borderRadius: 20,
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+                marginTop: "8px",
+              }}
+            >
+              <Typography>Learn More</Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid className="Stylesheet_trendingimg" sx={{ margin: 2 }}>
+          <img
+            src="/Assets/banner.png"
+            height={200}
+            width={280}
+            style={{
+              borderRadius: 10,
+            }}
+          />
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+              marginTop: "-80px",
+            }}
+          >
+            Diploma in Hotel
+          </Typography>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontFamily: "DM Sans",
+              fontSize: "18px",
+              fontWeight: "500",
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "center",
+              color: "#FFFFFF",
+            }}
+          >
+            Management
+          </Typography>
+        </Grid>
       </Grid>
     </Grid>
   );

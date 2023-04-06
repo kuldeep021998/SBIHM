@@ -14,6 +14,7 @@ export default function Slider2() {
     slidesToScroll: 1,
     arrows: false,
   };
+
   const images = [
     { image: "/Assets/Partners/holidayinn.jpeg" },
     { image: "/Assets/Partners/hyatt.jpeg" },

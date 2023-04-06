@@ -4,8 +4,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
+import Header from "./Header";
+import H3 from "./H3";
+import Footer from "./Footer";
 
-export default function Map() {
+export default function ContactUs() {
   const courses = [
     { id: 1, cn: "abcd" },
     { id: 2, cn: "abnvkcd" },
@@ -21,14 +24,12 @@ export default function Map() {
   return (
     <Grid
       container
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "grey",
-      }}
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
       <Grid item xs={12}>
+        <Header />
+      </Grid>
+      <Grid item xs={12} sx={{ marginTop: 5 }}>
         <Typography
           style={{
             fontFamily: "Noto Serif",
@@ -42,6 +43,20 @@ export default function Map() {
           }}
         >
           Contact us
+        </Typography>
+        <Typography
+          style={{
+            fontFamily: "Noto Serif",
+            fontSize: "20px",
+            fontWeight: 500,
+            lineHeight: "36px",
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#666666",
+            marginTop: 10,
+          }}
+        >
+          Reach out to us if you have any queries
         </Typography>
       </Grid>
       <Grid item sx={{ padding: 5 }}>
@@ -144,6 +159,12 @@ export default function Map() {
             Submit
           </Button>
         </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <H3 />
+      </Grid>
+      <Grid item xs={12} sx={{ marginTop: 5 }}>
+        <Footer />
       </Grid>
     </Grid>
   );

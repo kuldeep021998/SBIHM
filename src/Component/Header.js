@@ -1,4 +1,4 @@
-import { Divider, Grid, Button, Typography } from "@mui/material";
+import { Divider, Grid, Button, Typography, Hidden } from "@mui/material";
 import React, { Fragment, useEffect, useState } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -13,11 +13,6 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
-  //   const [show, setShow] = useState("");
-
-  //   const handleShow = () => {
-  //     setShow(false);
-  //   };
 
   const data = [
     {
@@ -148,22 +143,24 @@ export default function Header() {
                 <Typography>SBIHM</Typography>
                 <Typography>Kharagpur</Typography>
               </Grid>
+
               <Box component="div" sx={{ flexGrow: 1 }}></Box>
-              <Box>
-                <Button
-                  style={{
-                    fontFamily: "DM Sans",
-                    fontSize: "16px",
-                    fontWeight: 400,
-                    lineHeight: "24px",
-                    letterSpacing: "0.02em",
-                    textAlign: "left",
-                  }}
-                >
-                  About Us
-                </Button>
-                {showHeadings()}
-                {/* <Menu
+              <Hidden xsDown smDown>
+                <Box>
+                  <Button
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "16px",
+                      fontWeight: 400,
+                      lineHeight: "24px",
+                      letterSpacing: "0.02em",
+                      textAlign: "left",
+                    }}
+                  >
+                    About Us
+                  </Button>
+                  {showHeadings()}
+                  {/* <Menu
                   id="basic-menu"
                   anchorEl={anchorEl}
                   open={open}
@@ -174,19 +171,22 @@ export default function Header() {
                 >
                   {showMenu()}
                 </Menu> */}
-              </Box>
+                </Box>
+              </Hidden>
               <Box sx={{ flexGrow: 1 }} component="div"></Box>
-              <Box>
-                <Button
-                  variant="outlined"
-                  style={{ borderRadius: 50, marginRight: 10 }}
-                >
-                  Contact Us
-                </Button>
-                <Button variant="contained" style={{ borderRadius: 50 }}>
-                  Apply now
-                </Button>
-              </Box>
+              <Hidden xsDown smDown>
+                <Box>
+                  <Button
+                    variant="outlined"
+                    style={{ borderRadius: 50, marginRight: 10 }}
+                  >
+                    Contact Us
+                  </Button>
+                  <Button variant="contained" style={{ borderRadius: 50 }}>
+                    Apply now
+                  </Button>
+                </Box>
+              </Hidden>
             </Toolbar>
           </AppBar>
         </Box>
