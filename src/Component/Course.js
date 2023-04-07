@@ -1,12 +1,53 @@
-import React from "react";
+import React, { createRef } from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Course() {
+  const mySlider = createRef();
+
+  var settings = {
+    dots: true,
+    autoplay: 300,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
+
   const data = [
     {
       id: 1,
@@ -40,11 +81,18 @@ export default function Course() {
     },
   ];
 
-  const cards = (item, index) => {
-    return data.map((item, index) => {
+  const cards = () => {
+    return data.map((item) => {
       return (
-        <Grid sx={{ margin: 1 }}>
-          <Card style={{ backgroundColor: "#1E73BE14" }}>
+        <Grid
+          sx={{
+            margin: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            display: "center",
+          }}
+        >
+          <Card style={{ backgroundColor: "#1E73BE14", width: "30%" }}>
             <CardContent>
               <Typography
                 sx={{
@@ -399,16 +447,10 @@ export default function Course() {
         </Typography>
       </Grid>
 
-      <Grid
-        lg={12}
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          margin: 5,
-        }}
-      >
-        {cards()}
+      <Grid item lg={12}>
+        <Slider ref={mySlider} {...settings}>
+          {cards()}
+        </Slider>
       </Grid>
 
       <Grid lg={8} sx={{ paddingLeft: 30, paddingTop: 8 }}>
@@ -453,7 +495,7 @@ export default function Course() {
         </Typography>
       </Grid>
 
-      <Grid lg={4} sx={{ padding: 5, }}>
+      <Grid lg={4} sx={{ padding: 5 }}>
         <div>
           <Typography
             sx={{
