@@ -1,4 +1,4 @@
-import { Grid, Typography, TextField } from "@mui/material";
+import { Grid, Typography, TextField, Button } from "@mui/material";
 import React, { Fragment, useState } from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -27,7 +27,7 @@ export default function Apply() {
   };
 
   return (
-    <Grid spacing={2} container>
+    <Grid container>
       <Grid item xs={12} sx={{ bgcolor: "#FFFFF" }}>
         <Typography
           sx={{
@@ -140,7 +140,7 @@ export default function Apply() {
           </div>
 
           <Grid item sx={{ margin: 2 }}>
-            <FormControl fullWidth>
+            <FormControl fullWidth size="small">
               <InputLabel id="demo-simple-select-label">Courses</InputLabel>
               <Select
                 // value={categoryId}
@@ -153,6 +153,7 @@ export default function Apply() {
               </Select>
             </FormControl>
             <TextField
+              size="small"
               label="Applicant’s Full Name"
               variant="outlined"
               fullWidth
@@ -160,6 +161,7 @@ export default function Apply() {
               style={{ marginTop: 10 }}
             />
             <TextField
+              size="small"
               label="Applicant’s Mobile No."
               variant="outlined"
               fullWidth
@@ -167,6 +169,7 @@ export default function Apply() {
               style={{ marginTop: 10 }}
             />
             <TextField
+              size="small"
               label="Applicant’s Email"
               variant="outlined"
               fullWidth
@@ -174,6 +177,7 @@ export default function Apply() {
               style={{ marginTop: 10 }}
             />
             <TextField
+              size="small"
               label="Communicating Address"
               multiline
               rows={3}
@@ -191,8 +195,8 @@ export default function Apply() {
               }}
             >
               <Grid xs={3} item sx={{ marginTop: "10px" }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Courses</InputLabel>
+                <FormControl size="small" fullWidth>
+                  <InputLabel id="demo-simple-select-label">State</InputLabel>
                   <Select
                     // value={categoryId}
                     label="Category Name"
@@ -206,6 +210,7 @@ export default function Apply() {
               </Grid>
               <Grid xs={3} item sx={{ marginTop: "10px" }}>
                 <TextField
+                  size="small"
                   label="District"
                   variant="outlined"
                   fullWidth
@@ -214,6 +219,7 @@ export default function Apply() {
               </Grid>
               <Grid xs={3} item sx={{ marginTop: "10px" }}>
                 <TextField
+                  size="small"
                   label="Pincode"
                   variant="outlined"
                   fullWidth
@@ -234,6 +240,7 @@ export default function Apply() {
                   placeholder="Date Of Birth"
                   variant="outlined"
                   fullWidth
+                  size="small"
                   InputProps={{
                     style: { borderRadius: 50 },
                     startAdornment: (
@@ -246,6 +253,7 @@ export default function Apply() {
               </Grid>
               <Grid xs={5} item sx={{ marginTop: "10px" }}>
                 <TextField
+                  size="small"
                   label="Blood Group"
                   variant="outlined"
                   fullWidth
@@ -323,6 +331,7 @@ export default function Apply() {
                 <TextField
                   variant="outlined"
                   // fullWidth
+                  size="small"
                   InputProps={{
                     style: {
                       borderRadius: 50,
@@ -392,6 +401,7 @@ export default function Apply() {
                 <TextField
                   variant="outlined"
                   // fullWidth
+                  size="small"
                   InputProps={{
                     style: {
                       borderRadius: 50,
@@ -461,6 +471,7 @@ export default function Apply() {
                 <TextField
                   variant="outlined"
                   // fullWidth
+                  size="small"
                   InputProps={{
                     style: {
                       borderRadius: 50,
@@ -521,6 +532,7 @@ export default function Apply() {
               variant="outlined"
               placeholder="Father’s / Guardian’s Name"
               fullWidth
+              size="small"
               InputProps={{
                 style: {
                   borderRadius: 50,
@@ -530,6 +542,7 @@ export default function Apply() {
               }}
             />
             <TextField
+              size="small"
               variant="outlined"
               placeholder="Guardian’s Mobile No."
               fullWidth
@@ -543,6 +556,467 @@ export default function Apply() {
               }}
             />
           </Grid>
+        </Grid>
+        <Grid
+          item
+          sx={{
+            bgcolor: "#FFFFFF",
+            width: "100%",
+            borderRadius: 2,
+            marginTop: 5,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <Typography
+              sx={{
+                height: 20,
+                width: 20,
+                borderRadius: 20,
+                backgroundColor: "#1E73BE",
+                textAlign: "center",
+                fontSize: 14,
+                marginTop: 1.5,
+                marginRight: 2,
+                marginLeft: 2,
+              }}
+            >
+              2
+            </Typography>
+            <div>
+              <Typography
+                sx={{
+                  fontFamily: "DM Sans",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  lineHeight: "24px",
+                  letterSpacing: "0.02em",
+                  color: "#000000",
+                  marginTop: "10px",
+                }}
+              >
+                Educational Qualifications
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "28px",
+                  letterSpacing: "0.02em",
+                  color: "#666666",
+                }}
+              >
+                Check the examinations you’ve completed/graduated
+              </Typography>
+            </div>
+          </div>
+
+          <Grid item sx={{ margin: 2 }}>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked
+                  sx={{
+                    color: blueGrey[900],
+                    "&.Mui-checked": {
+                      color: blueGrey[900],
+                    },
+                  }}
+                />
+              }
+              label="10th Examination"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Subject"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Board Council"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Year of Passing"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Marks"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+            </div>
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked
+                  sx={{
+                    color: blueGrey[900],
+                    "&.Mui-checked": {
+                      color: blueGrey[900],
+                    },
+                  }}
+                />
+              }
+              label="12th Examination"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Subject"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Board Council"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Year of Passing"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Marks"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+            </div>
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked
+                  sx={{
+                    color: blueGrey[900],
+                    "&.Mui-checked": {
+                      color: blueGrey[900],
+                    },
+                  }}
+                />
+              }
+              label="Diploma"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Subject"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Board Council"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Year of Passing"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Marks"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+            </div>
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked
+                  sx={{
+                    color: blueGrey[900],
+                    "&.Mui-checked": {
+                      color: blueGrey[900],
+                    },
+                  }}
+                />
+              }
+              label="Graduation Degree"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Subject"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Board Council"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Year of Passing"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Marks"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+            </div>
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked
+                  sx={{
+                    color: blueGrey[900],
+                    "&.Mui-checked": {
+                      color: blueGrey[900],
+                    },
+                  }}
+                />
+              }
+              label="Post - Graduation Degree"
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Subject"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Board Council"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Year of Passing"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+              <TextField
+                size="small"
+                variant="outlined"
+                placeholder="Marks"
+                // fullWidth
+                InputProps={{
+                  style: {
+                    borderRadius: 50,
+                    marginLeft: 2,
+                    marginTop: 10,
+                    marginBottom: 15,
+                  },
+                }}
+              />
+            </div>
+          </Grid>
+        </Grid>
+        <Grid item sx={{ textAlign: "center", marginTop: 5 }}>
+          <Button sx={{ borderRadius: 15 }} fullWidth variant="contained">
+            Submit
+          </Button>
         </Grid>
       </Grid>
     </Grid>

@@ -15,6 +15,7 @@ import Zoom2 from "./Component/Zoom2";
 import C1 from "./Component/C1";
 import Map from "./Component/Map";
 import ContactUs from "./Component/ContactUs";
+import Course from "./Component/Course";
 function App() {
   return (
     <Router>
@@ -35,6 +36,7 @@ function App() {
         <Route element={<C1 />} path="/C1" />
         <Route element={<Map />} path="/Map" />
         <Route element={<ContactUs />} path="/Contact Us" />
+        <Route element={<Course />} path="/Course" />
       </Routes>
     </Router>
   );
