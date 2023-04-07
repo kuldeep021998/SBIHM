@@ -1,7 +1,167 @@
+import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
 
 export default function Course() {
+  const data = [
+    {
+      id: 1,
+      main: "1st Year",
+      text1: "Communicative English",
+      text2: "Front Office Management",
+      text3: "House Keeping Management",
+      text4: "Hotel Administration",
+      text5: "Tourism Management",
+      text6: "Front Office Management (P)",
+      text7: "House Keeping Management (P)",
+    },
+    {
+      id: 2,
+      main: "2nd Year",
+      text1: "Food Production",
+      text2: "Food and Beverage Service",
+      text3: "Food Safety and Microbiology",
+      text4: "Computer Applications",
+      text5: "Food Production (P)",
+      text6: "Food and Beverage Service (P)",
+    },
+    {
+      id: 3,
+      main: "3rd Year",
+      text1: "Food and Beverage Management",
+      text2: "Hotel Accounts",
+      text3: "HR Management in Hospitality Industry",
+      text4: "Entrepreneurship Management",
+      text5: "Industrial Training",
+    },
+  ];
+
+  const cards = (item, index) => {
+    return data.map((item, index) => {
+      return (
+        <Grid sx={{ margin: 1 }}>
+          <Card style={{ backgroundColor: "#1E73BE14" }}>
+            <CardContent>
+              <Typography
+                sx={{
+                  marginLeft: "20px",
+                  color: "#0A253D",
+                  fontFamily: "Noto Serif",
+                  fontSize: "24px",
+                  fontWeight: 700,
+                  lineHeight: "32px",
+                  letterSpacing: "0em",
+                  color: "#0A253D",
+                }}
+              >
+                {item.main}
+              </Typography>
+              <div>
+                <ul style={{ color: "#1E73BE" }}>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text1}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text2}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text3}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text4}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text5}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text6}
+                  </li>
+                  <li
+                    style={{
+                      fontFamily: "DM Sans",
+                      fontSize: "18px",
+                      fontWeight: 400,
+                      lineHeight: "20px",
+                      letterSpacing: "0em",
+                      textAlign: "left",
+                      color: "#0A253D",
+                    }}
+                  >
+                    {item.text7}
+                  </li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </Grid>
+      );
+    });
+  };
+
   return (
     <Grid container sx={{ justifyContent: "center" }}>
       <Grid xs={12} lg={6} sx={{ backgroundColor: "#1E73BE14", padding: 10 }}>
@@ -240,654 +400,224 @@ export default function Course() {
       </Grid>
 
       <Grid
-        lg={3}
+        lg={12}
         sx={{
-          backgroundColor: "#1E73BE14",
-          padding: 2,
-          marginTop: 5,
-          borderRadius: "10px",
-        }}
-      >
-        <Typography
-          sx={{
-            color: "#0A253D",
-            fontFamily: "Noto Serif",
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "32px",
-            letterSpacing: "0em",
-            textAlign: "left",
-            color: "#0A253D",
-          }}
-        >
-          1st Year
-        </Typography>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Communication English
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Front Office Management
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              House Keeping Management
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Hotel Administration
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Tourism Management
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Front Office Management (P)
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              House Keeping Management (P)
-            </Typography>
-          </div>
-        </div>
-      </Grid>
-
-      <Grid
-        lg={3}
-        sx={{
-          backgroundColor: "#1E73BE14",
-          padding: 2,
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
           margin: 5,
-          borderRadius: "10px",
         }}
       >
+        {cards()}
+      </Grid>
+
+      <Grid lg={8} sx={{ paddingLeft: 30, paddingTop: 8 }}>
         <Typography
-          sx={{
-            color: "#0A253D",
+          style={{
             fontFamily: "Noto Serif",
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "32px",
-            letterSpacing: "0em",
+            fontSize: "20px",
+            fontWeight: 600,
+            lineHeight: "36px",
+            letterSpacing: "0.02em",
             textAlign: "left",
             color: "#0A253D",
           }}
         >
-          2nd Year
+          We have a well-equipped and organized placement cell,
         </Typography>
-        <div
+        <Typography
           style={{
-            display: "flex",
-            flexDirection: "row",
+            fontFamily: "Noto Serif",
+            fontSize: "20px",
+            fontWeight: 600,
+            lineHeight: "36px",
+            letterSpacing: "0.02em",
+            textAlign: "left",
+            color: "#0A253D",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+          which is in constant touch with the industry for better
+        </Typography>
+        <Typography
+          style={{
+            fontFamily: "Noto Serif",
+            fontSize: "20px",
+            fontWeight: 600,
+            lineHeight: "36px",
+            letterSpacing: "0.02em",
+            textAlign: "left",
+            color: "#0A253D",
+          }}
+        >
+          placement opportunities for students.
+        </Typography>
+      </Grid>
+
+      <Grid lg={4} sx={{ padding: 5, }}>
+        <div>
+          <Typography
+            sx={{
+              color: "#1E73BE",
+              fontFamily: "DM Sans",
+              fontSize: "48px",
+              fontWeight: 700,
+              lineHeight: "56px",
             }}
           >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food Production
-            </Typography>
-          </div>
+            40+
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Noto Serif",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "left",
+              color: "#0A253D",
+            }}
+          >
+            Brands visit our campus every year to pick students
+          </Typography>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+        <div>
+          <Typography
+            sx={{
+              color: "#1E73BE",
+              fontFamily: "DM Sans",
+              fontSize: "48px",
+              fontWeight: 700,
+              lineHeight: "56px",
+              marginTop: "20px",
             }}
           >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food and Beverage Service
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+            40+
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Noto Serif",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "left",
+              color: "#0A253D",
             }}
           >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food Safety and Microbiology
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Computer Applications
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food Production (P)
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food and Beverage Service (P)
-            </Typography>
-          </div>
+            Students get successfully placed by the end of their academic year
+          </Typography>
         </div>
       </Grid>
 
-      <Grid
-        lg={3}
-        sx={{
-          backgroundColor: "#1E73BE14",
-          padding: 2,
-          marginTop: 5,
-          borderRadius: "10px",
-          width: 1,
-        }}
-      >
+      <Grid xs={12} lg={6} sx={{ padding: 10 }}>
         <Typography
           sx={{
-            color: "#0A253D",
             fontFamily: "Noto Serif",
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "32px",
-            letterSpacing: "0em",
-            textAlign: "left",
+            fontSize: "40px",
+            fontWeight: 600,
+            lineHeight: "48px",
+            letterSpacing: "0.02em",
+            textAlign: "center",
             color: "#0A253D",
           }}
         >
-          3rd Year
+          Internship & Training
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "DM Sans",
+            fontSize: "16px",
+            fontWeight: 400,
+            lineHeight: "32px",
+            letterSpacing: "0.02em",
+            textAlign: "left",
+            color: "#0A253D",
+            marginTop: "15px",
+          }}
+        >
+          Internship & Training Programme is too much essential or compulsory
+          for each student. In this training the student will have live exposure
+          of the 5-star Hotels, and also develop skills, discipline, knowledge
+          and experiences which will help everyone during campus recruitment to
+          get best job opportunities. The Industrial Training is a combination
+          of Theory and Practice.
         </Typography>
         <div
           style={{
-            display: "flex",
-            flexDirection: "row",
+            fontFamily: "DM Sans",
+            fontSize: "16px",
+            fontWeight: 400,
+            lineHeight: "32px",
+            letterSpacing: "0.02em",
+            textAlign: "left",
+            color: "#0A253D",
+            marginTop: "15px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Food and Beverage Management
-            </Typography>
-          </div>
+          <li>Kitchen Operation</li>
+          <li>Food and Beverage Cum Bar service</li>
+          <li>Front Office Operation</li>
+          <li>Housekeeping Operation</li>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
+      </Grid>
+      <Grid
+        lg={6}
+        xs={12}
+        sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}
+      >
+        <img src="/Assets/training.png" width={"70%"} />
+      </Grid>
+
+      <Grid lg={12} sx={{ backgroundColor: "#1E73BE14", padding: 5 }}>
+        <Typography
+          sx={{
+            fontFamily: "DM Sans",
+            fontSize: "28px",
+            fontWeight: 700,
+            lineHeight: "40px",
+            letterSpacing: "0.02em",
+            textAlign: "center",
+            color: "#0A253D",
+            marginTop: "15px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Hotel Accounts
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
+          Don’t miss out on the opportunity to build your career with
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: "Noto Serif",
+            fontSize: "28px",
+            fontWeight: 600,
+            lineHeight: "40px",
+            letterSpacing: "0.02em",
+            textAlign: "center",
+            color: "#1E73BE",
           }}
         >
-          <div
+          Bachelor Degree in Hotel Management
+        </Typography>
+
+        <div style={{ textAlign: "center", marginTop: "30px" }}>
+          <Button
+            fullWidth
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              borderRadius: 50,
+              width: "20%",
+              borderColor: "black",
+              color: "black",
+              marginRight: 50,
             }}
+            variant="outlined"
           >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              HR Management in Hospitality Industry
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            Talk to Institute
+          </Button>
+          <Button
+            fullWidth
+            style={{ borderRadius: 50, width: "20%" }}
+            variant="contained"
           >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Entrepreneurship Management
-            </Typography>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <CircleIcon sx={{ fontSize: "10px", color: "#1E73BE" }} />
-          </div>
-          <div>
-            <Typography
-              style={{
-                marginLeft: "10px",
-                fontFamily: "DM Sans",
-                fontSize: "18px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0em",
-                textAlign: "left",
-                color: "#0A253D",
-              }}
-            >
-              Industrial Training
-            </Typography>
-          </div>
+            Apply Now
+          </Button>
         </div>
       </Grid>
     </Grid>
