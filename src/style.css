@@ -1,8 +1,4 @@
 .Stylesheet_trendingimg {
-  /* width: 177px;
-    height: 177px; */
-  /* width: 30%;
-  height: 30%; */
   transition: transform 0.1s;
   cursor: pointer;
 }
@@ -10,7 +6,82 @@
   transform: scale(1.1);
 }
 
-.Component {
-  background-image: url(../public/Assets/blue.png);
-  background-size: 100px;
+@media screen and (max-width: 500px) {
+  .style_course_heading {
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .style_course_texts {
+    font-family: Noto Serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .style_course_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .style_course_motive {
+    background-color: #fafafa;
+    flex-direction: column;
+    font-family: Noto Serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  .style_background {
+    background-color: #fafafa;
+  }
+  .style_iandt {
+    font-family: Noto Serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  .style_itext {
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  .abc {
+    margin-top: 10px;
+  }
+  .slider1 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .map {
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+  .map1 {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .form {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 }

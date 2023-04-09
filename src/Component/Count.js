@@ -12,7 +12,6 @@ export default function Count() {
     return data.map((item) => {
       return (
         <Grid
-          item
           sx={{
             alignItems: "center",
             display: "flex",
@@ -63,10 +62,7 @@ export default function Count() {
   return (
     <Grid container>
       <Grid
-        xs={12}
         lg={12}
-        sm={6}
-        md={6}
         item
         sx={{
           display: "flex",

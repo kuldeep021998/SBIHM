@@ -1,12 +1,10 @@
-import * as React from "react";
-import { Grid, Typography, TextField, Button, Hidden } from "@mui/material";
+import { Grid, Typography, Button, TextField } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import "../style.css";
-
-export default function Map() {
+export default function Map1() {
   const courses = [
     { id: 1, cn: "abcd" },
     { id: 2, cn: "abnvkcd" },
@@ -20,69 +18,38 @@ export default function Map() {
   };
 
   return (
-    <Grid
-      container
-      sx={{
-        padding: 5,
-        display: "flex",
-        alignItems: "center",
-        backgroundColor: "grey",
-      }}
-    >
-      <Grid lg={12} sx={{ marginBottom: 3 }}>
-        <Typography
-          sx={{
-            fontFamily: "Noto Serif",
-            fontSize: "40px",
-            fontWeight: 600,
-            lineHeight: "48px",
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            color: "#FFFFFF",
+    <Grid container>
+      <Grid lg={6} sm={12} xs={12} item sx={{ textAlign: "right" }}>
+        <img
+          className="map1"
+          src="/Assets/Map.png"
+          height={"100%"}
+          width={"100%"}
+          style={{
+            borderTopLeftRadius: "12px",
+            borderBottomLeftRadius: "12px",
           }}
-        >
-          Contact Us
-        </Typography>
+        />
       </Grid>
-      <Hidden smDown xsDown>
-        <Grid
-          lg={6}
-          sm={12}
-          xs={12}
-          item
-          sx={{
-            justifyContent: "center",
-            alignContent: "center",
-            display: "flex",
-          }}
-        >
-          <img
-            src="/Assets/Map.png"
-            style={{
-              height: "465px",
-              width: "100%",
-              borderTopLeftRadius: "12px",
-              borderBottomLeftRadius: "12px",
-            }}
-          />
-        </Grid>
-      </Hidden>
 
       <Grid
-        className="map"
+        className="form"
         xs={12}
         lg={6}
         sx={{
-          padding: "20px",
+          display: "flex",
+          backgroundColor: "#1E73BE14",
           borderTopRightRadius: "12px",
           borderEndEndRadius: "12px",
-          backgroundColor: "#FFFFFF",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <div
           style={{
             display: "flex",
             flexDirection: "column",
+            padding: "10%",
           }}
         >
           <div style={{ marginBottom: 5 }}>
@@ -116,15 +83,28 @@ export default function Map() {
               Fill out the form and our team will get back to you
             </Typography>
           </div>
-
-          <TextField
-            label="Name"
-            variant="outlined"
-            fullWidth
-            size="small"
-            InputProps={{ style: { borderRadius: 50 } }}
-          />
-
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+            }}
+          >
+            <TextField
+              label="First Name"
+              variant="outlined"
+              fullWidth
+              size="small"
+              InputProps={{ style: { borderRadius: 50 } }}
+            />
+            <TextField
+              label="Last Name"
+              variant="outlined"
+              fullWidth
+              size="small"
+              InputProps={{ style: { borderRadius: 50, marginLeft: 2 } }}
+            />
+          </div>
           <TextField
             label="Email"
             variant="outlined"

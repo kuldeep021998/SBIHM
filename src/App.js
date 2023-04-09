@@ -16,6 +16,9 @@ import C1 from "./Component/C1";
 import Map from "./Component/Map";
 import ContactUs from "./Component/ContactUs";
 import Course from "./Component/Course";
+import AboutUs from "./Component/AboutUs";
+import Map1 from "./Component/Map1";
+import List from "./Component/List";
 function App() {
   return (
     <Router>
@@ -35,8 +38,11 @@ function App() {
         <Route element={<Zoom2 />} path="/Zoom2" />
         <Route element={<C1 />} path="/C1" />
         <Route element={<Map />} path="/Map" />
+        <Route element={<Map1 />} path="/Map1" />
         <Route element={<ContactUs />} path="/Contact Us" />
         <Route element={<Course />} path="/Course" />
+        <Route element={<AboutUs />} path="/About Us" />
+        <Route element={<List />} path="/List" />
       </Routes>
     </Router>
   );

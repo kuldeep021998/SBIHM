@@ -1,36 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Hidden } from "@mui/material";
 
 export default function H1() {
   return (
-    <Grid container spacing={2}>
-      <Grid
-        item
-        sx={{
-          height: "250px",
-          width: "180px",
-          backgroundColor: "#1E73BE0A",
-          marginTop: "50px",
-          borderTopRightRadius: "12px",
-          borderBottomRightRadius: "12px",
-        }}
-      ></Grid>
-      <Grid
-        xs={12}
-        item
-        sx={{
-          display: "flex",
-          margin: 5,
-          marginTop: -35,
-        }}
-      >
-        <Grid
-          item
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            margin: "20px",
+    <Grid
+      container
+      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+    >
+      <Grid lg={6} xs={12}>
+        {/* <Hidden smDown xsDown>
+          <div
+            style={{
+              backgroundColor: "#1E73BE0A",
+              height: 220,
+              width: 170,
+              borderTopRightRadius: "12px",
+              borderEndEndRadius: "12px",
+            }}
+          ></div>
+        </Hidden> */}
+        <div
+          style={{
+            width: "83%",
+            padding: "10px",
+            marginLeft: "8%",
           }}
         >
           <div
@@ -77,25 +70,17 @@ export default function H1() {
           >
             A gateway to your future from here in Kharagpur..
           </div>
-        </Grid>
-        <Grid
-          item
-          lg={6}
-          // xs={12}
-          sm={6}
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignSelf: "center",
-            // backgroundColor: "red",
-            margin: "20px",
+        </div>
+      </Grid>
+      <Grid item lg={6} xs={12} sx={{ padding: "10px" }}>
+        <img
+          src="/Assets/banner.png"
+          style={{
+            height: "480px",
+            width: "100%",
+            borderRadius: "12px",
           }}
-        >
-          <img
-            src="/Assets/banner.png"
-            style={{ height: 350, width: 550, borderRadius: "12px" }}
-          />
-        </Grid>
+        />
       </Grid>
     </Grid>
   );

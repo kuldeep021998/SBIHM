@@ -48,6 +48,7 @@ export default function Home() {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
+          // style={{ height: "50%", width: "50%", display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
           <DialogActions>
             <CloseRoundedIcon
@@ -145,33 +146,29 @@ export default function Home() {
   const showHomePage = () => {
     return (
       <Grid container>
-        <Grid item xs={12}>
+        <Grid xs={12} lg={12} sm={12}>
           <Header />
+        </Grid>
+        <Grid lg={12} xs={12} sm={12}>
           <Slider1 />
         </Grid>
-        <Grid item xs={12}>
+        <Grid xs={12} sx={{ marginTop: 5 }}>
           <H1 />
-          <Count />
-          <Slider2 />
+        </Grid>
+        <Grid lg={12}>
           <H2 />
         </Grid>
-        <Grid item xs={12}>
+        <Grid lg={12} sx={{ marginTop: 5 }}>
           <Zoom1 />
         </Grid>
-        <Grid item xs={12} sx={{ marginTop: 8 }}>
+        <Grid lg={12} sx={{ marginTop: 5 }}>
           <Zoom2 />
         </Grid>
-        <Grid item xs={12} sx={{ marginTop: 2 }}>
+        <Grid xs={12}>
           <Map />
         </Grid>
-        <Grid item xs={12} sx={{ marginTop: 2 }}>
+        <Grid xs={12}>
           <H3 />
-        </Grid>
-        <Grid item xs={12} sx={{ marginTop: 2 }}>
-          <Slider3 />
-        </Grid>
-        <Grid item xs={12} sx={{ marginTop: 2 }}>
-          <Footer />
         </Grid>
       </Grid>
     );
@@ -180,7 +177,7 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
       <div>{showHomePage()}</div>
-      <div>{showDialog()}</div>
+      {/* <div>{showDialog()}</div> */}
     </div>
   );
 }

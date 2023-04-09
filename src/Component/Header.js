@@ -86,56 +86,48 @@ export default function Header() {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
+    <Grid container>
+      <Grid item xs={12} lg={12} sm={12}>
         <Box sx={{ flexGrow: 1 }}>
-          <Grid
-            item
-            xs={12}
-            sx={{
+          <div
+            style={{
               flexDirection: "row",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              bgcolor: "#1E73BE",
+              backgroundColor: "#1E73BE",
             }}
           >
-            <Grid item>
-              <Typography
-                sx={{
-                  marginRight: "5px",
-                  fontFamily: "DM Sans",
-                  fontSize: "14px",
-                  fontWeight: 500,
-                  lineHeight: "24px",
-                  letterSpacing: "0.02em",
-                  textAlign: "left",
-                }}
-              >
-                Admission 2022 - 2023
-              </Typography>
-            </Grid>
-            <Grid>
-              <Typography>|</Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                sx={{
-                  textDecoration: "underline",
-                  marginLeft: "5px",
-                  fontFamily: "DM Sans",
-                  fontFamily: "DM Sans",
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  lineHeight: "24px",
-                  letterSpacing: "0.02em",
-                  textAlign: "left",
-                }}
-              >
-                Apply Online
-              </Typography>
-            </Grid>
-          </Grid>
+            <Typography
+              sx={{
+                marginRight: "5px",
+                fontFamily: "DM Sans",
+                fontSize: "14px",
+                fontWeight: 500,
+                lineHeight: "24px",
+                letterSpacing: "0.02em",
+                textAlign: "left",
+              }}
+            >
+              Admission 2022 - 2023
+            </Typography>
+            <Typography>|</Typography>
+            <Typography
+              sx={{
+                textDecoration: "underline",
+                marginLeft: "5px",
+                fontFamily: "DM Sans",
+                fontFamily: "DM Sans",
+                fontSize: "14px",
+                fontWeight: 400,
+                lineHeight: "24px",
+                letterSpacing: "0.02em",
+                textAlign: "left",
+              }}
+            >
+              Apply Online
+            </Typography>
+          </div>
           <AppBar position="static" color="inherit">
             <Toolbar>
               <img src="/Assets/logo.jpg" style={{ width: 70, padding: 3 }} />

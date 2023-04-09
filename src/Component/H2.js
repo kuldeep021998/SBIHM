@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
+import "../style.css";
 
 export default function H2() {
   return (
     <Grid
       sx={{
-        padding: 10,
-        display: "flex",
-        alignItems: "center",
+        padding: 5,
       }}
       container
     >
       <Grid
-        sx={{
-          alignItems: "center",
-          justifyContent: "center",
-          display: "flex",
-          padding: 10,
-        }}
-        item
+        sx={{ alignItems: "center", justifyContent: "center", display: "flex" }}
         sm={12}
         lg={6}
         xs={12}
@@ -31,30 +24,22 @@ export default function H2() {
             lineHeight: "48px",
             letterSpacing: "0.02em",
             color: "#0A253D",
+            textAlign: "left",
+            width: "70%",
           }}
         >
-          <div>We are an authorised</div>
-          <div>Vocational Training Partner</div>
-          <div>of School of Vocational</div>
-          <div>Studies</div>
+          <div>
+            We are an authorised Vocational Training Partner of School of
+            Vocational Studies
+          </div>
         </div>
       </Grid>
-      <Grid
-        item
-        sm={12}
-        lg={6}
-        xs={12}
-        sx={{
-          alignItems: "center",
-          justifyContent: "center",
-          display: "flex",
-          // padding: 10,
-        }}
-      >
+      <Grid sm={12} lg={6} xs={12}>
         <img
+          className="abc"
           src="/Assets/sbihm/img_1_1628229558197.jpg"
-          width={600}
-          height={350}
+          width={"100%"}
+          height={"100%"}
         />
       </Grid>
     </Grid>

@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Typography, Grid, Box } from "@mui/material";
+import { Typography, Grid, Hidden } from "@mui/material";
+import "../style.css";
 
 export default function Slider3() {
   const mySlider = createRef();
@@ -65,28 +66,37 @@ export default function Slider3() {
   const playSlide = () => {
     return data.map((item) => {
       return (
-        <Grid item >
-          <div
+        <Grid
+          className="slider3"
+          sx={{
+            flexDirection: "row",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Grid
             style={{
+              justifyContent: "center",
+              alignItems: "center",
               display: "flex",
-              flexDirection: "row",
             }}
           >
-            <div
-              style={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
-              }}
-            >
+            <div>
               <img
                 src={item.image}
                 height={250}
                 width={300}
-                style={{ borderRadius: "10px" }}
+                style={{ borderRadius: "10px", marginRight: "50px" }}
               />
             </div>
-            <div style={{ marginLeft: 20 }}>
+            <div
+              style={{
+                justifyContent: "center",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <img src="/Assets/inverted.png" height={50} width={50} />
               <Typography
                 style={{
@@ -149,7 +159,7 @@ export default function Slider3() {
                 {item.course}
               </Typography>
             </div>
-          </div>
+          </Grid>
         </Grid>
       );
     });
@@ -175,7 +185,7 @@ export default function Slider3() {
         paddingBottom: 5,
       }}
     >
-      <Grid item xs={12}>
+      <Grid item xs={12} lg={12}>
         <Typography
           style={{
             fontFamily: "Noto Serif",
@@ -191,53 +201,62 @@ export default function Slider3() {
           Hear From Our Students
         </Typography>
       </Grid>
-      <Grid
-        item
-        xs={2}
-        sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}
-      >
-        <ArrowBackIcon
-          style={{
-            cursor: " pointer",
-            color: "#1E73BE",
-            background: "#FFFFFF",
-            padding: 10,
-            fontSize: 20,
-            fontWeight: "bold",
-            borderRadius: 20,
+      <Hidden xsDown smDown>
+        <Grid
+          item
+          lg={2}
+          sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
           }}
-          fontSize="small"
-          onClick={handleLeftClick}
-        />
-      </Grid>
-      <Grid item xs={8}>
+        >
+          <ArrowBackIcon
+            style={{
+              cursor: " pointer",
+              color: "#1E73BE",
+              background: "#FFFFFF",
+              padding: 10,
+              fontSize: 20,
+              fontWeight: "bold",
+              borderRadius: 20,
+            }}
+            fontSize="small"
+            onClick={handleLeftClick}
+          />
+        </Grid>
+      </Hidden>
+      <Grid item lg={8}>
         <Slider ref={mySlider} {...settings}>
           {playSlide()}
         </Slider>
       </Grid>
-      <Grid
-        item
-        xs={2}
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-        }}
-      >
-        <ArrowForwardIcon
+      <Hidden xsDown smDown>
+        <Grid
+          item
+          // xs={2}
+          lg={2}
           style={{
-            cursor: " pointer",
-            color: "#1E73BE",
-            background: "#FFFFFF",
-            padding: 10,
-            fontSize: 20,
-            fontWeight: "bold",
-            borderRadius: 20,
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
           }}
-          fontSize="small"
-          onClick={handleRightClick}
-        />
-      </Grid>
+        >
+          <ArrowForwardIcon
+            style={{
+              cursor: " pointer",
+              color: "#1E73BE",
+              background: "#FFFFFF",
+              padding: 10,
+              fontSize: 20,
+              fontWeight: "bold",
+              borderRadius: 20,
+            }}
+            fontSize="small"
+            onClick={handleRightClick}
+          />
+        </Grid>
+      </Hidden>
     </Grid>
   );
 }
