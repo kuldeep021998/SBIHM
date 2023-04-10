@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Grid, Typography, TextField, Button, Hidden } from "@mui/material";
-import Header from "./Header";
-import H3 from "./H3";
+import Header from "./Home/Header";
+import H3 from "./Home/H3";
 import Footer from "./Footer";
 import Map1 from "./Map1";
 export default function ContactUs() {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid xs={12} lg={12} sm={12}>
         <Header />
       </Grid>
       <Grid item xs={12} sx={{ marginTop: 5 }}>

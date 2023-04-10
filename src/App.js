@@ -1,24 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Component/Home";
+import Home from "./Component/Home/Home";
+import Count from "./Component/Home/Count";
+import H1 from "./Component/Home/H1";
+import H2 from "./Component/Home/H2";
+import H3 from "./Component/Home/H3";
+import Map from "./Component/Home/Map";
+import Slider1 from "./Component/Home/Slider1";
+import Slider2 from "./Component/Home/Slider2";
+import Slider3 from "./Component/Home/Slider3";
+import Header from "./Component/Home/Header";
 import Footer from "./Component/Footer";
-import Header from "./Component/Header";
-import Apply from "./Component/Apply";
-import Slider1 from "./Component/Slider1";
-import Slider2 from "./Component/Slider2";
-import Slider3 from "./Component/Slider3";
-import H1 from "./Component/H1";
-import Count from "./Component/Count";
-import H2 from "./Component/H2";
-import H3 from "./Component/H3";
-import Zoom1 from "./Component/Zoom1";
-import Zoom2 from "./Component/Zoom2";
-import C1 from "./Component/C1";
-import Map from "./Component/Map";
-import ContactUs from "./Component/ContactUs";
-import Course from "./Component/Course";
-import AboutUs from "./Component/AboutUs";
+import C1 from "./Component/Course/C1";
+import C2 from "./Component/Course/C2";
+import C3 from "./Component/Course/C3";
+import Apply from "./Component/Apply/Apply";
 import Map1 from "./Component/Map1";
-import List from "./Component/List";
+import Zoom1 from "./Component/Home/Zoom1";
+import Zoom2 from "./Component/Home/Zoom2";
+import ContactUs from "./Component/ContactUs";
+import List from "./Component/AboutUs/List";
+import AboutUs from "./Component/AboutUs/AboutUs";
+import Images1 from "./Component/AboutUs/Image1";
+import Images2 from "./Component/AboutUs/Images2";
+import Course from "./Component/Course/Course";
 function App() {
   return (
     <Router>
@@ -37,12 +41,16 @@ function App() {
         <Route element={<Zoom1 />} path="/Zoom1" />
         <Route element={<Zoom2 />} path="/Zoom2" />
         <Route element={<C1 />} path="/C1" />
+        <Route element={<C2 />} path="/C2" />
+        <Route element={<C3 />} path="/C3" />
         <Route element={<Map />} path="/Map" />
         <Route element={<Map1 />} path="/Map1" />
         <Route element={<ContactUs />} path="/Contact Us" />
         <Route element={<Course />} path="/Course" />
         <Route element={<AboutUs />} path="/About Us" />
         <Route element={<List />} path="/List" />
+        <Route element={<Images1 />} path="/Image1" />
+        <Route element={<Images2 />} path="/Image" />
       </Routes>
     </Router>
   );

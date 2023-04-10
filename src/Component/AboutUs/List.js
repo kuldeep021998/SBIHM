@@ -269,7 +269,8 @@ export default function List() {
           }}
         >
           <div>We offer financial aid is awarded to </div>
-          <div>students for further education</div>
+          <div>students for further </div>
+          <div>education</div>
         </div>
       </Grid>
       <Grid

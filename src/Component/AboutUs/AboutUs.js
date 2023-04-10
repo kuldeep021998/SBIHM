@@ -1,43 +1,59 @@
 import { Grid, Typography } from "@mui/material";
+import Images2 from "./Images2";
 import List from "./List";
+import "../../style.css";
+import Image1 from "./Image1";
+import H3 from "../Home/H3";
+import Header from "../Home/Header";
+
 export default function AboutUs() {
   return (
-    <Grid container sx={{ padding: 5 }}>
-      <Grid
-        lg={12}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
+    <Grid container>
+      <Grid xs={12} lg={12} sm={12}>
+        <Header />
       </Grid>
+      <Grid item xs={12} sx={{ marginTop: 5 }}>
+        <Typography
+          style={{
+            fontFamily: "Noto Serif",
+            fontSize: "40px",
+            fontWeight: 600,
+            lineHeight: "48px",
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#0A253D",
+            marginTop: 10,
+          }}
+        >
+          About us
+        </Typography>
+        <Typography
+          style={{
+            fontFamily: "Noto Serif",
+            fontSize: "20px",
+            fontWeight: 500,
+            lineHeight: "36px",
+            letterSpacing: "0em",
+            textAlign: "center",
+            color: "#666666",
+            marginTop: 10,
+          }}
+        >
+          The destination for students aspiring for excellence in the
+          hospitality sector
+        </Typography>
+      </Grid>
+
+      <Grid
+        xs={12}
+        // sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <Image1 />
+      </Grid>
+
       <Grid xs={12} lg={6} sx={{ padding: 4 }}>
         <Typography
-          sx={{
+          style={{
             fontFamily: "Noto Serif",
             fontSize: "40px",
             fontWeight: 600,
@@ -51,7 +67,7 @@ export default function AboutUs() {
           Why Join SBIHM Kharagpur
         </Typography>
         <Typography
-          sx={{
+          style={{
             fontFamily: "DM Sans",
             fontSize: "16px",
             fontWeight: 400,
@@ -72,6 +88,7 @@ export default function AboutUs() {
           environment for all around learning and development.
         </Typography>
       </Grid>
+
       <Grid
         lg={6}
         xs={12}
@@ -91,6 +108,7 @@ export default function AboutUs() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          marginTop: 5,
         }}
       >
         <img src="/Assets/banner.png" height={"350px"} width={"100%"} />
@@ -125,64 +143,12 @@ export default function AboutUs() {
         <List />
       </Grid>
 
-      <Grid
-        lg={12}
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
-        <img
-          src="/Assets/banner.png"
-          style={{
-            height: "100%",
-            width: "25%",
-            borderRadius: "12px",
-            margin: "10px",
-          }}
-        />
+      <Grid lg={12} xs={12}>
+        <Images2 />
+      </Grid>
+
+      <Grid xs={12}>
+        <H3 />
       </Grid>
     </Grid>
   );

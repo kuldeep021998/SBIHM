@@ -8,7 +8,7 @@ import H3 from "./H3";
 import Count from "./Count";
 import Slider2 from "./Slider2";
 import Slider3 from "./Slider3";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import Zoom1 from "./Zoom1";
 import Zoom2 from "./Zoom2";
 import Map from "./Map";
@@ -48,9 +48,8 @@ export default function Home() {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
-          // style={{ height: "50%", width: "50%", display: 'flex', justifyContent: 'center', alignItems: 'center' }}
         >
-          <DialogActions>
+          <DialogActions style={{ backgroundColor: "grey" }}>
             <CloseRoundedIcon
               sharp
               color="action"
@@ -59,8 +58,8 @@ export default function Home() {
             />
           </DialogActions>
 
-          <DialogContent>
-            <Grid item sx={{ padding: 3 }}>
+          <DialogContent style={{ backgroundColor: "grey" }}>
+            <Grid item>
               <Grid sx={{ marginBottom: 5 }}>
                 <Typography
                   sx={{
@@ -121,9 +120,8 @@ export default function Home() {
                 </InputLabel>
                 <Select
                   // value={categoryId}
-                  // label="Category Name"
+                  label="Interested Course"
                   // onChange={(event) => setCategoryId(event.target.value)}
-                  // InputProps={{ style: { borderRadius: 50 } }}
                   style={{ borderRadius: 50 }}
                 >
                   {fillCategoryDropDown()}
@@ -132,7 +130,11 @@ export default function Home() {
               <Button
                 fullWidth
                 variant="contained"
-                sx={{ borderRadius: 15, marginTop: "10px" }}
+                sx={{
+                  borderRadius: 15,
+                  marginTop: "10px",
+                  marginBottom: "10px",
+                }}
               >
                 Apply Now
               </Button>
@@ -155,8 +157,11 @@ export default function Home() {
         <Grid xs={12} sx={{ marginTop: 5 }}>
           <H1 />
         </Grid>
-        <Grid lg={12}>
-          <H2 />
+        <Grid xs={12} sx={{ margin: 5 }}>
+          <Count />
+        </Grid>
+        <Grid xs={12} sx={{ marginTop: 5 }}>
+          <Slider2 />
         </Grid>
         <Grid lg={12} sx={{ marginTop: 5 }}>
           <Zoom1 />
@@ -164,11 +169,20 @@ export default function Home() {
         <Grid lg={12} sx={{ marginTop: 5 }}>
           <Zoom2 />
         </Grid>
+        <Grid lg={12}>
+          <H2 />
+        </Grid>
+        <Grid xs={12}>
+          <Slider3 />
+        </Grid>
         <Grid xs={12}>
           <Map />
         </Grid>
         <Grid xs={12}>
           <H3 />
+        </Grid>
+        <Grid xs={12}>
+          <Footer />
         </Grid>
       </Grid>
     );
@@ -177,7 +191,7 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: "#FFFFFF" }}>
       <div>{showHomePage()}</div>
-      {/* <div>{showDialog()}</div> */}
+      <div>{showDialog()}</div>
     </div>
   );
 }

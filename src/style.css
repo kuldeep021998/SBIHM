@@ -7,6 +7,17 @@
 }
 
 @media screen and (max-width: 500px) {
+  .slider3_div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .slider3_image {
+    /* display: flex; */
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+  }
   .style_course_heading {
     font-family: DM Sans;
     font-size: 16px;
@@ -16,7 +27,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
   }
   .style_course_texts {
     font-family: Noto Serif;
@@ -24,10 +34,7 @@
     font-weight: 600;
     line-height: 32px;
     letter-spacing: 0em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
   }
   .style_course_button {
     display: flex;
@@ -47,6 +54,7 @@
   }
   .style_background {
     background-color: #fafafa;
+    padding: none;
   }
   .style_iandt {
     font-family: Noto Serif;
@@ -67,11 +75,6 @@
   .abc {
     margin-top: 10px;
   }
-  .slider1 {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-  }
   .map {
     border-bottom-left-radius: 12px;
     border-top-left-radius: 12px;
@@ -83,5 +86,15 @@
   .form {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+  .style_course_button2 {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .list {
+    width: 100;
+    height: 200;
   }
 }

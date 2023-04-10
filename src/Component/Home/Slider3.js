@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Typography, Grid, Hidden } from "@mui/material";
-import "../style.css";
+import "../../style.css";
 
 export default function Slider3() {
   const mySlider = createRef();
@@ -66,39 +66,36 @@ export default function Slider3() {
   const playSlide = () => {
     return data.map((item) => {
       return (
-        <Grid
-          className="slider3"
-          sx={{
-            flexDirection: "row",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Grid
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-            }}
-          >
-            <div>
-              <img
-                src={item.image}
-                height={250}
-                width={300}
-                style={{ borderRadius: "10px", marginRight: "50px" }}
-              />
+        <Grid>
+          <Hidden smUp mdUp>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <div>
+                <img
+                  src={item.image}
+                  height={250}
+                  width={230}
+                  style={{
+                    borderRadius: "10px",
+                  }}
+                />
+              </div>
             </div>
             <div
               style={{
-                justifyContent: "center",
                 display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 flexDirection: "column",
               }}
             >
               <img src="/Assets/inverted.png" height={50} width={50} />
-              <Typography
+              <div
                 style={{
                   fontFamily: "DM Sans",
                   fontSize: "20px",
@@ -106,11 +103,12 @@ export default function Slider3() {
                   lineHeight: "36px",
                   letterSpacing: "0em",
                   color: "#0A253D",
+                  textAlign: "center",
                 }}
               >
                 {item.text1}
-              </Typography>
-              <Typography
+              </div>
+              <div
                 style={{
                   fontFamily: "DM Sans",
                   fontSize: "20px",
@@ -118,11 +116,12 @@ export default function Slider3() {
                   lineHeight: "36px",
                   letterSpacing: "0em",
                   color: "#0A253D",
+                  textAlign: "center",
                 }}
               >
                 {item.text2}
-              </Typography>
-              <Typography
+              </div>
+              <div
                 style={{
                   fontFamily: "DM Sans",
                   fontSize: "20px",
@@ -130,23 +129,25 @@ export default function Slider3() {
                   lineHeight: "36px",
                   letterSpacing: "0em",
                   color: "#0A253D",
+                  textAlign: "center",
                 }}
               >
                 {item.text3}
-              </Typography>
-              <Typography
-                sx={{
+              </div>
+              <div
+                style={{
                   fontFamily: "Roboto Slab",
                   fontSize: "24px",
                   fontWeight: 500,
                   lineHeight: "40px",
                   letterSpacing: "0em",
                   color: "#1E73BE",
+                  textAlign: "center",
                 }}
               >
                 {item.name}
-              </Typography>
-              <Typography
+              </div>
+              <div
                 style={{
                   fontFamily: "DM Sans",
                   fontSize: "20px",
@@ -154,12 +155,98 @@ export default function Slider3() {
                   lineHeight: "36px",
                   letterSpacing: "0em",
                   color: "#0A253D",
+                  textAlign: "center",
                 }}
               >
                 {item.course}
-              </Typography>
+              </div>
             </div>
-          </Grid>
+          </Hidden>
+          <Hidden smDown xsDown mdDown>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <div>
+                <img
+                  src={item.image}
+                  height={250}
+                  width={230}
+                  style={{
+                    borderRadius: "10px",
+                  }}
+                />
+              </div>
+
+              <div>
+                <img src="/Assets/inverted.png" height={50} width={50} />
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    lineHeight: "36px",
+                    letterSpacing: "0em",
+                    color: "#0A253D",
+                  }}
+                >
+                  {item.text1}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    lineHeight: "36px",
+                    letterSpacing: "0em",
+                    color: "#0A253D",
+                  }}
+                >
+                  {item.text2}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    lineHeight: "36px",
+                    letterSpacing: "0em",
+                    color: "#0A253D",
+                  }}
+                >
+                  {item.text3}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Roboto Slab",
+                    fontSize: "24px",
+                    fontWeight: 500,
+                    lineHeight: "40px",
+                    letterSpacing: "0em",
+                    color: "#1E73BE",
+                  }}
+                >
+                  {item.name}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    lineHeight: "36px",
+                    letterSpacing: "0em",
+                    color: "#0A253D",
+                  }}
+                >
+                  {item.course}
+                </div>
+              </div>
+            </div>
+          </Hidden>
         </Grid>
       );
     });
@@ -176,16 +263,12 @@ export default function Slider3() {
   return (
     <Grid
       container
-      spacing={2}
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         backgroundColor: "#1E73BE14",
-        paddingBottom: 5,
+        padding: 5,
       }}
     >
-      <Grid item xs={12} lg={12}>
+      <Grid item xs={12} lg={12} sx={{ padding: 3 }}>
         <Typography
           style={{
             fontFamily: "Noto Serif",
@@ -195,12 +278,12 @@ export default function Slider3() {
             letterSpacing: "0em",
             textAlign: "center",
             color: "#0A253D",
-            marginTop: 10,
           }}
         >
           Hear From Our Students
         </Typography>
       </Grid>
+
       <Hidden xsDown smDown>
         <Grid
           item
@@ -226,15 +309,16 @@ export default function Slider3() {
           />
         </Grid>
       </Hidden>
-      <Grid item lg={8}>
+
+      <Grid item lg={8} xs={12}>
         <Slider ref={mySlider} {...settings}>
           {playSlide()}
         </Slider>
       </Grid>
+
       <Hidden xsDown smDown>
         <Grid
           item
-          // xs={2}
           lg={2}
           style={{
             justifyContent: "center",

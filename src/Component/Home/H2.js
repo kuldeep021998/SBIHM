@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
-import "../style.css";
+import "../../style.css";
 
 export default function H2() {
   return (

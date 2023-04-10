@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import Header from './Header'
+import Header from "../Home/Header";
 
 export default function ApplyPage() {
   return (

@@ -1,23 +1,20 @@
 import React, { createRef } from "react";
 import { Button, Grid, Hidden, Typography } from "@mui/material";
-import CircleIcon from "@mui/icons-material/Circle";
+
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../style.css";
+import "../../style.css";
 
 export default function Course() {
   const mySlider = createRef();
 
   var settings = {
     dots: true,
-    autoplay: 300,
+    autoplay: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
@@ -25,7 +22,7 @@ export default function Course() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -34,14 +31,14 @@ export default function Course() {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: false,
         },
@@ -85,33 +82,35 @@ export default function Course() {
   const cards = () => {
     return data.map((item) => {
       return (
-        <Grid
-          sx={{
-            margin: 1,
-            justifyContent: "center",
-            alignItems: "center",
-            display: "center",
-          }}
-        >
-          <Card style={{ backgroundColor: "#1E73BE14", width: "30%" }}>
-            <CardContent>
-              <Typography
-                sx={{
-                  marginLeft: "20px",
-                  color: "#0A253D",
-                  fontFamily: "Noto Serif",
-                  fontSize: "24px",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                  letterSpacing: "0em",
-                  color: "#0A253D",
-                }}
-              >
-                {item.main}
-              </Typography>
-              <div>
-                <ul style={{ color: "#1E73BE" }}>
-                  <li
+        <Grid lg={12} item className="Stylesheet_trendingimg">
+          <Box
+            elevation={3}
+            style={{
+              backgroundColor: "#1E73BE14",
+              padding: "10px",
+              width: 350,
+              height: 250,
+              margin: "10px",
+            }}
+          >
+            <Typography
+              sx={{
+                marginLeft: "20px",
+                color: "#0A253D",
+                fontFamily: "Noto Serif",
+                fontSize: "24px",
+                fontWeight: 700,
+                lineHeight: "32px",
+                letterSpacing: "0em",
+                color: "#0A253D",
+              }}
+            >
+              {item.main}
+            </Typography>
+            <div>
+              <ul style={{ color: "#1E73BE" }}>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -123,8 +122,10 @@ export default function Course() {
                     }}
                   >
                     {item.text1}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -136,8 +137,10 @@ export default function Course() {
                     }}
                   >
                     {item.text2}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -149,8 +152,10 @@ export default function Course() {
                     }}
                   >
                     {item.text3}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -162,8 +167,10 @@ export default function Course() {
                     }}
                   >
                     {item.text4}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -175,8 +182,10 @@ export default function Course() {
                     }}
                   >
                     {item.text5}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -188,8 +197,10 @@ export default function Course() {
                     }}
                   >
                     {item.text6}
-                  </li>
-                  <li
+                  </Typography>
+                </li>
+                <li>
+                  <Typography
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
@@ -201,11 +212,11 @@ export default function Course() {
                     }}
                   >
                     {item.text7}
-                  </li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
+                  </Typography>
+                </li>
+              </ul>
+            </div>
+          </Box>
         </Grid>
       );
     });
@@ -213,77 +224,6 @@ export default function Course() {
 
   return (
     <Grid container sx={{ justifyContent: "center" }}>
-      <Grid xs={12} lg={6} sx={{ backgroundColor: "#1E73BE14", padding: 10 }}>
-        <div
-          className="style_course_heading"
-          style={{
-            fontFamily: "DM Sans",
-            fontSize: "24px",
-            fontWeight: 700,
-            lineHeight: "32px",
-            letterSpacing: "0.02em",
-            textAlign: "left",
-            color: "#1E73BE",
-          }}
-        >
-          Degree Courses
-        </div>
-        <div
-          className="style_course_texts"
-          style={{
-            fontFamily: "Noto Serif",
-            fontSize: "40px",
-            fontWeight: 600,
-            lineHeight: "48px",
-            letterSpacing: "0.02em",
-            color: "#0A253D",
-          }}
-        >
-          Bachelor Degree in Hotel
-        </div>
-        <div
-          className="style_course_texts"
-          style={{
-            fontFamily: "Noto Serif",
-            fontSize: "40px",
-            fontWeight: 600,
-            lineHeight: "48px",
-            letterSpacing: "0.02em",
-            color: "#0A253D",
-          }}
-        >
-          Management
-        </div>
-        <div className="style_course_button">
-          <Button
-            sx={{
-              borderRadius: 15,
-              marginTop: "20px",
-              width: "70%",
-              borderColor: "#0A253D",
-              color: "#0A253D",
-            }}
-            size="small"
-            fullWidth
-            variant="outlined"
-          >
-            About the Course
-          </Button>
-        </div>
-        <div className="style_course_button">
-          <Button
-            sx={{ borderRadius: 15, marginTop: "10px", width: "70%" }}
-            size="small"
-            fullWidth
-            variant="contained"
-          >
-            Apply Now
-          </Button>
-        </div>
-      </Grid>
-      <Grid xs={12} lg={6}>
-        <img src="/Assets/banner.png" height={"100%"} width={"100%"} />
-      </Grid>
       <Hidden smDown xsDown>
         <Grid
           sx={{
@@ -440,110 +380,19 @@ export default function Course() {
         </Grid>
       </Hidden>
 
-      <Grid xs={12} lg={12}>
-        <Typography
-          sx={{
-            fontFamily: "Noto Serif",
-            fontSize: "40px",
-            fontWeight: 600,
-            lineHeight: "48px",
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            color: "#0A253D",
-            marginTop: 5,
-          }}
-        >
-          Course Curriculum
-        </Typography>
-      </Grid>
+      
 
-      {/* <Grid item lg={12}>
+      {/* <Grid
+        item
+        lg={12}
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
         <Slider ref={mySlider} {...settings}>
           {cards()}
         </Slider>
       </Grid> */}
 
-      <Hidden smDown xsDown>
-        <Grid lg={2}></Grid>
-      </Hidden>
-      <Grid
-        lg={6}
-        xs={12}
-        sx={{
-          fontFamily: "Noto Serif",
-          fontSize: "20px",
-          fontWeight: 600,
-          lineHeight: "36px",
-          letterSpacing: "0.02em",
-          textAlign: "left",
-          color: "#0A253D",
-          marginTop: 8,
-          padding: 2,
-        }}
-        className="style_course_motive"
-      >
-        <div>
-          We have a well-equipped and organized placement cell, which is in
-          constant touch with the industry for better placement opportunities
-          for students.
-        </div>
-      </Grid>
-
-      <Grid lg={4} xs={12} sx={{ padding: 5 }} className="style_background">
-        <div className="style_course_button">
-          <Typography
-            sx={{
-              color: "#1E73BE",
-              fontFamily: "DM Sans",
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "56px",
-            }}
-          >
-            40+
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Noto Serif",
-              fontSize: "16px",
-              fontWeight: 400,
-              lineHeight: "24px",
-              letterSpacing: "0.02em",
-              textAlign: "left",
-              color: "#0A253D",
-            }}
-          >
-            Brands visit our campus every year to pick students
-          </Typography>
-        </div>
-        <div className="style_course_button">
-          <Typography
-            sx={{
-              color: "#1E73BE",
-              fontFamily: "DM Sans",
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "56px",
-              marginTop: "20px",
-            }}
-          >
-            40+
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Noto Serif",
-              fontSize: "16px",
-              fontWeight: 400,
-              lineHeight: "24px",
-              letterSpacing: "0.02em",
-              textAlign: "left",
-              color: "#0A253D",
-            }}
-          >
-            Students get successfully placed by the end of their academic year
-          </Typography>
-        </div>
-      </Grid>
+      
 
       <Grid xs={12} lg={6}>
         <div
@@ -639,27 +488,46 @@ export default function Course() {
           Bachelor Degree in Hotel Management
         </Typography>
 
-        <div style={{ textAlign: "center", marginTop: "30px" }}>
-          <Button
-            fullWidth
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+            marginTop: "30px",
+          }}
+        >
+          <div
             style={{
               borderRadius: 50,
-              width: "20%",
-              borderColor: "black",
               color: "black",
-              marginRight: 50,
+              height: 40,
+              width: "40%",
+              backgroundColor: "#FFFFFF",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              borderBlockColor: "black",
+              marginRight: "30px",
             }}
-            variant="outlined"
           >
             Talk to Institute
-          </Button>
-          <Button
-            fullWidth
-            style={{ borderRadius: 50, width: "20%" }}
-            variant="contained"
+          </div>
+
+          <div
+            style={{
+              borderRadius: 50,
+              color: "black",
+              height: 40,
+              width: "40%",
+              backgroundColor: "#1E73BE",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+            }}
           >
             Apply Now
-          </Button>
+          </div>
         </div>
       </Grid>
     </Grid>

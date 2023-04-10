@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import "../style.css";
+import '../../style.css';
 
 export default function Zoom2() {
   return (

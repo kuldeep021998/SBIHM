@@ -52,7 +52,7 @@ export default function Slider1() {
   const playSlide = () => {
     return images.map((item) => {
       return (
-        <Grid xs={12} item>
+        <Grid xs={12} lg={12} item>
           <img src={item.image} height={500} width={"100%"} />
         </Grid>
       );
@@ -60,8 +60,8 @@ export default function Slider1() {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
+    <Grid container >
+      <Grid item xs={12} lg={12}>
         <Slider ref={mySlider} {...settings}>
           {playSlide()}
         </Slider>
