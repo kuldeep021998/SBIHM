@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useNavigation } from "react-router-dom";
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -18,13 +19,6 @@ export default function Header() {
     {
       id: 1,
       heading: "Degree Courses",
-      texts: {
-        text1: "Bachelor Degree in Hotel Management",
-        text2: "Diploma in Hotel Management",
-        text3: "MBA in Hotel Management",
-        text4: "Master Degree in Hotel Management",
-        text5: "Post Graduation Diploma in Hotel Management",
-      },
     },
     {
       id: 2,
@@ -48,9 +42,27 @@ export default function Header() {
     },
   ];
 
-  useEffect(function () {
-    // handleShow();
-  }, []);
+  const degrees = [
+    "Bachelor Degree in Hotel Management",
+    "Diploma in Hotel Management",
+    "MBA in Hotel Management",
+    "Master Degree in Hotel Management",
+    "Post Graduation Diploma in Hotel Management",
+  ];
+
+  const certificates = [
+    "Certificate In Front Office Operation",
+    "Certificate In Accomodation Operation",
+    "Certificate In Kitchen Operation",
+    "Certificate In Restaurant & Bar Operation",
+  ];
+
+  const diploma = [
+    "Certificate In Front Office Operation",
+    "Certificate In Accomodation Operation",
+    "Certificate In Kitchen Operation",
+    "Certificate In Restaurant & Bar Operation",
+  ];
 
   const showHeadings = () => {
     return data.map((item) => {
@@ -123,7 +135,9 @@ export default function Header() {
                 lineHeight: "24px",
                 letterSpacing: "0.02em",
                 textAlign: "left",
+                cursor: "pointer",
               }}
+              onClick={() => navigate("./Apply")}
             >
               Apply Online
             </Typography>
@@ -152,17 +166,6 @@ export default function Header() {
                     About Us
                   </Button>
                   {showHeadings()}
-                  {/* <Menu
-                  id="basic-menu"
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  MenuListProps={{
-                    "aria-labelledby": "basic-button",
-                  }}
-                >
-                  {showMenu()}
-                </Menu> */}
                 </Box>
               </Hidden>
               <Box sx={{ flexGrow: 1 }} component="div"></Box>
@@ -171,10 +174,15 @@ export default function Header() {
                   <Button
                     variant="outlined"
                     style={{ borderRadius: 50, marginRight: 10 }}
+                    onClick={() => navigate("./ContactUs")}
                   >
                     Contact Us
                   </Button>
-                  <Button variant="contained" style={{ borderRadius: 50 }}>
+                  <Button
+                    onClick={() => navigate("./Apply")}
+                    variant="contained"
+                    style={{ borderRadius: 50 }}
+                  >
                     Apply now
                   </Button>
                 </Box>

@@ -1,47 +1,47 @@
-import { Divider, Grid, Hidden, Typography } from "@mui/material";
-import React, { Fragment, useState } from "react";
+import {
+  Divider,
+  Grid,
+  Hidden,
+  Typography,
+  MenuItem,
+  Paper,
+  MenuList,
+  ListItemText,
+} from "@mui/material";
+import React, { Fragment, useState, useEffect } from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-export default function Footer() {
-  const [degree, setDegree] = React.useState("");
 
-  const handleChange = (event) => {
-    setDegree(event.target.value);
-  };
+export default function Footer() {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [openDegree, setOpenDegree] = useState(false);
+  const [openCertificate, setOpenCertificate] = useState(false);
+  const [openDiploma, setOpenDiploma] = useState(false);
+
   const degrees = [
-    { text: "Bachelor Degree in Hotel Management" },
-    { text: "Diploma in Hotel Management" },
-    { text: "MBA in Hotel Management" },
-    { text: "Master Degree in Hotel Management" },
-    { text: "Post Graduation Diploma in Hotel Management" },
+    "Bachelor Degree in Hotel Management",
+    "Diploma in Hotel Management",
+    "MBA in Hotel Management",
+    "Master Degree in Hotel Management",
+    "Post Graduation Diploma in Hotel Management",
   ];
 
-  const getDegrees = () => {
-    return degrees.map((item) => {
-      return <MenuItem>{item.text}</MenuItem>;
-    });
-  };
-  //   {
-  //     id: 2,
-  //     text1: "Certificate In Front Office Operation",
-  //     text2: "Certificate In Accomodation Operation",
-  //     text3: "Certificate In Kitchen Operation",
-  //     text4: "Certificate In Restaurant & Bar Operation",
-  //   },
-  //   {
-  //     id: 3,
-  //     text1: "Certificate In Front Office Operation",
-  //     text2: "Certificate In Accomodation Operation",
-  //     text3: "Certificate In Kitchen Operation",
-  //     text4: "Certificate In Restaurant & Bar Operation",
-  //   },
-  // ];
+  const certificates = [
+    "Certificate In Front Office Operation",
+    "Certificate In Accomodation Operation",
+    "Certificate In Kitchen Operation",
+    "Certificate In Restaurant & Bar Operation",
+  ];
+
+  const diplomas = [
+    "Certificate In Front Office Operation",
+    "Certificate In Accomodation Operation",
+    "Certificate In Kitchen Operation",
+    "Certificate In Restaurant & Bar Operation",
+  ];
+
   return (
     <Grid
       container
@@ -247,48 +247,59 @@ export default function Footer() {
           xs={12}
           sx={{
             marginTop: "30px",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
           }}
         >
-          {/* <FormControl fullWidth variant="standard" size="large">
-            <InputLabel
-              id="demo-simple-select-standard-label"
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <div
               style={{
                 fontFamily: "Roboto Slab",
-                fontSize: "20px",
+                fontSize: "32px",
                 fontWeight: 500,
+                lineHeight: "56px",
+                letterSpacing: "0em",
                 color: "#FFFFFF",
-                paddingLeft: 10,
               }}
             >
               Degree Courses
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-standard-label"
-              id="demo-simple-select-standard"
-              value={degree}
-              onChange={handleChange}
-              label="Age"
-            >
-              {getDegrees()}
-            </Select>
-          </FormControl> */}
-          <div
-            style={{
-              fontFamily: "Roboto Slab",
-              fontSize: "32px",
-              fontWeight: 500,
-              lineHeight: "56px",
-              letterSpacing: "0em",
-              color: "#FFFFFF",
-            }}
-          >
-            Degree Courses
+            </div>
+            <div>
+              <KeyboardArrowDownIcon
+                onClick={() => setOpenDegree(!openDegree)}
+                fontSize="large"
+                htmlColor="white"
+              />
+            </div>
           </div>
-          <KeyboardArrowDownIcon fontSize="large" htmlColor="white" />
+
+          <div>
+            {openDegree && (
+              <div style={{ textAlign: "left" }}>
+                <ul>
+                  {degrees.map((item) => (
+                    <div
+                      style={{
+                        fontFamily: "DM Sans",
+                        fontSize: "16px",
+                        marginBottom: "10px",
+                        color: "#FFFFFF",
+                        backgroundColor: "",
+                      }}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </Grid>
+
         <div
           style={{
             height: "1px",
@@ -298,27 +309,56 @@ export default function Footer() {
             marginTop: "10px",
           }}
         ></div>
-        <Grid
-          xs={12}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <Grid xs={12}>
           <div
             style={{
-              fontFamily: "Roboto Slab",
-              fontSize: "32px",
-              fontWeight: 500,
-              lineHeight: "56px",
-              letterSpacing: "0em",
-              color: "#FFFFFF",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            Certificate Courses
+            <div
+              style={{
+                fontFamily: "Roboto Slab",
+                fontSize: "32px",
+                fontWeight: 500,
+                lineHeight: "56px",
+                letterSpacing: "0em",
+                color: "#FFFFFF",
+              }}
+            >
+              Certificate Courses
+            </div>
+            <div>
+              <KeyboardArrowDownIcon
+                onClick={() => setOpenCertificate(!openCertificate)}
+                fontSize="large"
+                htmlColor="white"
+              />
+            </div>
           </div>
-          <KeyboardArrowDownIcon fontSize="large" htmlColor="white" />
+
+          <div>
+            {openCertificate && (
+              <div style={{ textAlign: "left" }}>
+                <ul>
+                  {certificates.map((certificate) => (
+                    <div
+                      style={{
+                        fontFamily: "DM Sans",
+                        fontSize: "16px",
+                        marginBottom: "10px",
+                        color: "#FFFFFF",
+                        backgroundColor: "",
+                      }}
+                    >
+                      {certificate}
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </Grid>
         <div
           style={{
@@ -328,27 +368,55 @@ export default function Footer() {
             marginBottom: "10px",
           }}
         ></div>
-        <Grid
-          xs={12}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <Grid xs={12}>
           <div
             style={{
-              fontFamily: "Roboto Slab",
-              fontSize: "32px",
-              fontWeight: 500,
-              lineHeight: "56px",
-              letterSpacing: "0em",
-              color: "#FFFFFF",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            Diploma Courses
+            <div
+              style={{
+                fontFamily: "Roboto Slab",
+                fontSize: "32px",
+                fontWeight: 500,
+                lineHeight: "56px",
+                letterSpacing: "0em",
+                color: "#FFFFFF",
+              }}
+            >
+              Diploma Courses
+            </div>
+            <div>
+              <KeyboardArrowDownIcon
+                onClick={() => setOpenDiploma(!openDiploma)}
+                fontSize="large"
+                htmlColor="white"
+              />
+            </div>
           </div>
-          <KeyboardArrowDownIcon fontSize="large" htmlColor="white" />
+
+          <div>
+            {openDiploma && (
+              <div style={{ textAlign: "left" }}>
+                <ul>
+                  {certificates.map((diploma) => (
+                    <div
+                      style={{
+                        fontFamily: "DM Sans",
+                        fontSize: "16px",
+                        marginBottom: "10px",
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      {diploma}
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </Grid>
         <div
           style={{

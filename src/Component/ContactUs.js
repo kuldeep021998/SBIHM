@@ -48,7 +48,9 @@ export default function ContactUs() {
       <Grid item xs={12}>
         <H3 />
       </Grid>
-      <Grid item xs={12} sx={{ marginTop: 5 }}></Grid>
+      <Grid item xs={12} sx={{ marginTop: 5 }}>
+        <Footer />
+      </Grid>
     </Grid>
   );
 }

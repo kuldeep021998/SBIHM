@@ -23,11 +23,13 @@ import AboutUs from "./Component/AboutUs/AboutUs";
 import Images1 from "./Component/AboutUs/Image1";
 import Images2 from "./Component/AboutUs/Images2";
 import Course from "./Component/Course/Course";
+import Abc from "./Component/Abc";
 function App() {
   return (
     <Router>
       <Routes>
         <Route element={<Home />} path="/" />
+        <Route element={<Abc />} path="/abc" />
         <Route element={<Footer />} path="/Footer" />
         <Route element={<Header />} path="/Header" />
         <Route element={<Apply />} path="/Apply" />
@@ -45,9 +47,9 @@ function App() {
         <Route element={<C3 />} path="/C3" />
         <Route element={<Map />} path="/Map" />
         <Route element={<Map1 />} path="/Map1" />
-        <Route element={<ContactUs />} path="/Contact Us" />
+        <Route element={<ContactUs />} path="/ContactUs" />
         <Route element={<Course />} path="/Course" />
-        <Route element={<AboutUs />} path="/About Us" />
+        <Route element={<AboutUs />} path="/AboutUs" />
         <Route element={<List />} path="/List" />
         <Route element={<Images1 />} path="/Image1" />
         <Route element={<Images2 />} path="/Image" />
