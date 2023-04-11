@@ -4,7 +4,7 @@ import "../../style.css";
 export default function C1() {
   return (
     <Grid container sx={{ backgroundColor: "#1E73BE14" }}>
-      <Grid xs={12} lg={6} sx={{ padding: 10 }}>
+      <Grid xs={12} md={6} lg={6} sx={{ padding: 10 }}>
         <div className="style_course_heading">
           <Typography
             style={{
@@ -74,7 +74,7 @@ export default function C1() {
         </div>
       </Grid>
 
-      <Grid xs={12} lg={6}>
+      <Grid xs={12} md={6} lg={6}>
         <img src="/Assets/banner.png" height={"100%"} width={"100%"} />
       </Grid>
     </Grid>
