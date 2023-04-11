@@ -1,86 +1,388 @@
-import { Grid, Typography, Hidden } from "@mui/material";
+import { Grid, Hidden } from "@mui/material";
 
 export default function C2() {
   return (
     <Grid container>
-      <Hidden smDown xsDown>
-        <Grid lg={2}></Grid>
+      <Hidden smDown>
+        <Grid
+          sx={{
+            padding: 5,
+            backgroundColor: "#1E73BE",
+            margin: 5,
+            flexDirection: "row",
+            display: "flex",
+            justifyContent: "space-between",
+            borderRadius: "10px",
+            width: "100%",
+          }}
+        >
+          <Grid lg={3} sx={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+              }}
+            >
+              Duration
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              3 years
+            </div>
+          </Grid>
+          <Grid lg={3} sx={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+              }}
+            >
+              Eligibility
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              10 + 2
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              Passed
+            </div>
+          </Grid>
+          <Grid lg={3} sx={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+              }}
+            >
+              Industrial Training Duration
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              6 months in
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              5 star hotel
+            </div>
+          </Grid>
+          <Grid lg={3} sx={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+              }}
+            >
+              Placement
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              Indian &
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              Foreign
+            </div>
+          </Grid>
+        </Grid>
       </Hidden>
-      <Grid
-        lg={6}
-        xs={12}
-        sx={{
-          fontFamily: "Noto Serif",
-          fontSize: "20px",
-          fontWeight: 600,
-          lineHeight: "36px",
-          letterSpacing: "0.02em",
-          textAlign: "left",
-          color: "#0A253D",
-        }}
-      >
-        <div style={{ padding: 50 }} className="style_course_motive">
-          We have a well-equipped and organized placement cell, which is in
-          constant touch with the industry for better placement opportunities
-          for students.
-        </div>
-      </Grid>
 
-      <Grid lg={4} xs={12} sx={{ padding: 5 }} className="style_background">
-        <div className="style_course_button">
-          <Typography
-            sx={{
-              color: "#1E73BE",
-              fontFamily: "DM Sans",
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "56px",
+      <Hidden smUp>
+        <Grid
+          xs={12}
+          sx={{
+            backgroundColor: "#1E73BE",
+            margin: "10px",
+            borderRadius: "10px",
+            padding: "20px",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
             }}
           >
-            40+
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Noto Serif",
-              fontSize: "16px",
-              fontWeight: 400,
-              lineHeight: "24px",
-              letterSpacing: "0.02em",
-              textAlign: "left",
-              color: "#0A253D",
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Duration
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              3 Years
+            </div>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "0.1%",
+              backgroundColor: "white",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          ></div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
             }}
           >
-            Brands visit our campus every year to pick students
-          </Typography>
-        </div>
-        <div className="style_course_button">
-          <Typography
-            sx={{
-              color: "#1E73BE",
-              fontFamily: "DM Sans",
-              fontSize: "48px",
-              fontWeight: 700,
-              lineHeight: "56px",
-              marginTop: "20px",
+            <div>
+              <div
+                style={{
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  color: "#FFFFFFA3",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                Industrial Training
+              </div>
+              <div
+                style={{
+                  fontFamily: "DM Sans",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  lineHeight: "20px",
+                  letterSpacing: "0.02em",
+                  color: "#FFFFFFA3",
+                  textAlign: "left",
+                }}
+              >
+                Duration
+              </div>
+            </div>
+            <div>
+              <div
+                style={{
+                  fontFamily: "DM Sans",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  lineHeight: "28px",
+                  letterSpacing: "0.02em",
+                  color: "#FFFFFF",
+                }}
+              >
+                6 months in
+              </div>
+              <div
+                style={{
+                  fontFamily: "DM Sans",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  lineHeight: "28px",
+                  letterSpacing: "0.02em",
+                  color: "#FFFFFF",
+                }}
+              >
+                5 star hotel
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "0.1%",
+              backgroundColor: "white",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          ></div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
             }}
           >
-            40+
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Noto Serif",
-              fontSize: "16px",
-              fontWeight: 400,
-              lineHeight: "24px",
-              letterSpacing: "0.02em",
-              textAlign: "left",
-              color: "#0A253D",
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Eligibility
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              10 + 2 Passed
+            </div>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "0.1%",
+              backgroundColor: "white",
+              marginTop: "10px",
+              marginBottom: "10px",
+            }}
+          ></div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
             }}
           >
-            Students get successfully placed by the end of their academic year
-          </Typography>
-        </div>
-      </Grid>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "16px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFFA3",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Placement
+            </div>
+            <div
+              style={{
+                fontFamily: "DM Sans",
+                fontSize: "20px",
+                fontWeight: 500,
+                lineHeight: "28px",
+                letterSpacing: "0.02em",
+                color: "#FFFFFF",
+              }}
+            >
+              Indian & Foreign
+            </div>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "1px",
+              backgroundColor: "white",
+              marginTop: "10px",
+              marginBottom: "40px",
+            }}
+          ></div>
+        </Grid>
+      </Hidden>
     </Grid>
   );
 }

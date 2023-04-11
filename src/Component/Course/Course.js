@@ -14,14 +14,14 @@ export default function Course() {
     dots: true,
     autoplay: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -30,7 +30,7 @@ export default function Course() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -38,7 +38,7 @@ export default function Course() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           dots: false,
         },
@@ -82,9 +82,9 @@ export default function Course() {
   const cards = () => {
     return data.map((item) => {
       return (
-        <Grid lg={12} item className="Stylesheet_trendingimg">
+        <Grid lg={12} className="Stylesheet_trendingimg">
           <Box
-            elevation={3}
+            // elevation={3}
             style={{
               backgroundColor: "#1E73BE14",
               padding: "10px",
@@ -224,166 +224,7 @@ export default function Course() {
 
   return (
     <Grid container sx={{ justifyContent: "center" }}>
-      <Hidden smDown xsDown>
-        <Grid
-          sx={{
-            padding: 5,
-            backgroundColor: "#1E73BE",
-            margin: 5,
-            flexDirection: "row",
-            display: "flex",
-            justifyContent: "space-between",
-            borderRadius: "10px",
-            width: "100%",
-          }}
-        >
-          <Grid lg={3} sx={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFFA3",
-              }}
-            >
-              Duration
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              3 years
-            </div>
-          </Grid>
-          <Grid lg={3} sx={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFFA3",
-              }}
-            >
-              Eligibility
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              10 + 2
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              Passed
-            </div>
-          </Grid>
-          <Grid lg={3} sx={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFFA3",
-              }}
-            >
-              Industrial Training Duration
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              6 months in
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              5 star hotel
-            </div>
-          </Grid>
-          <Grid lg={3} sx={{ textAlign: "center" }}>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "16px",
-                fontWeight: 400,
-                lineHeight: "20px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFFA3",
-              }}
-            >
-              Placement
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              Indian &
-            </div>
-            <div
-              style={{
-                fontFamily: "DM Sans",
-                fontSize: "20px",
-                fontWeight: 500,
-                lineHeight: "28px",
-                letterSpacing: "0.02em",
-                color: "#FFFFFF",
-              }}
-            >
-              Foreign
-            </div>
-          </Grid>
-        </Grid>
-      </Hidden>
-
-      
-
       {/* <Grid
-        item
         lg={12}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
@@ -391,145 +232,6 @@ export default function Course() {
           {cards()}
         </Slider>
       </Grid> */}
-
-      
-
-      <Grid xs={12} lg={6}>
-        <div
-          className="style_iandt"
-          style={{
-            fontFamily: "Noto Serif",
-            fontSize: "40px",
-            fontWeight: 600,
-            lineHeight: "48px",
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            color: "#0A253D",
-            padding: 10,
-          }}
-        >
-          Internship & Training
-        </div>
-        <div
-          className="style_itext"
-          style={{
-            fontFamily: "DM Sans",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "32px",
-            letterSpacing: "0.02em",
-            textAlign: "left",
-            color: "#0A253D",
-            marginTop: "15px",
-            padding: 10,
-          }}
-        >
-          Internship & Training Programme is too much essential or compulsory
-          for each student. In this training the student will have live exposure
-          of the 5-star Hotels, and also develop skills, discipline, knowledge
-          and experiences which will help everyone during campus recruitment to
-          get best job opportunities. The Industrial Training is a combination
-          of Theory and Practice.
-        </div>
-        <div
-          className="style_itext"
-          style={{
-            fontFamily: "DM Sans",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "32px",
-            letterSpacing: "0.02em",
-            textAlign: "left",
-            color: "#0A253D",
-            marginTop: "15px",
-            padding: 10,
-          }}
-        >
-          <li>Kitchen Operation</li>
-          <li>Food and Beverage Cum Bar service</li>
-          <li>Front Office Operation</li>
-          <li>Housekeeping Operation</li>
-        </div>
-      </Grid>
-      <Grid
-        lg={6}
-        xs={12}
-        sx={{ justifyContent: "center", alignItems: "center", display: "flex" }}
-      >
-        <img src="/Assets/training.png" width={"70%"} />
-      </Grid>
-
-      <Grid lg={12} sx={{ backgroundColor: "#1E73BE14", padding: 5 }}>
-        <Typography
-          sx={{
-            fontFamily: "DM Sans",
-            fontSize: "28px",
-            fontWeight: 700,
-            lineHeight: "40px",
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            color: "#0A253D",
-            marginTop: "15px",
-          }}
-        >
-          Don’t miss out on the opportunity to build your career with
-        </Typography>
-        <Typography
-          sx={{
-            fontFamily: "Noto Serif",
-            fontSize: "28px",
-            fontWeight: 600,
-            lineHeight: "40px",
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            color: "#1E73BE",
-          }}
-        >
-          Bachelor Degree in Hotel Management
-        </Typography>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            alignItems: "center",
-            marginTop: "30px",
-          }}
-        >
-          <div
-            style={{
-              borderRadius: 50,
-              color: "black",
-              height: 40,
-              width: "40%",
-              backgroundColor: "#FFFFFF",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              borderBlockColor: "black",
-              marginRight: "30px",
-            }}
-          >
-            Talk to Institute
-          </div>
-
-          <div
-            style={{
-              borderRadius: 50,
-              color: "black",
-              height: 40,
-              width: "40%",
-              backgroundColor: "#1E73BE",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-            }}
-          >
-            Apply Now
-          </div>
-        </div>
-      </Grid>
     </Grid>
   );
 }

@@ -5,7 +5,7 @@ import "../../style.css";
 import Image1 from "./Image1";
 import H3 from "../Home/H3";
 import Header from "../Home/Header";
-
+import Footer from "../Footer";
 export default function AboutUs() {
   return (
     <Grid container>
@@ -138,17 +138,17 @@ export default function AboutUs() {
           their future easily in the various corporate sectors.
         </Typography>
       </Grid>
-
       <Grid>
         <List />
       </Grid>
-
       <Grid lg={12} xs={12}>
         <Images2 />
       </Grid>
-
       <Grid xs={12}>
         <H3 />
+      </Grid>
+      <Grid xs={12}>
+        <Footer />
       </Grid>
     </Grid>
   );

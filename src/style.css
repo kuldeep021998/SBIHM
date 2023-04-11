@@ -36,11 +36,12 @@
     letter-spacing: 0em;
     text-align: center;
   }
-  .style_course_button {
+  .style_course_button1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -50px;
   }
   .style_course_motive {
     background-color: #fafafa;
@@ -56,6 +57,9 @@
     background-color: #fafafa;
     padding: none;
   }
+  .c4_image {
+    width: 90%;
+  }
   .style_iandt {
     font-family: Noto Serif;
     font-size: 24px;
@@ -63,6 +67,7 @@
     line-height: 32px;
     letter-spacing: 0.02em;
     text-align: center;
+    padding-right: 20px;
   }
   .style_itext {
     font-family: DM Sans;
@@ -71,6 +76,8 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: center;
+    color: #666666;
+    padding-right: 20px;
   }
   .abc {
     margin-top: 10px;
@@ -93,8 +100,23 @@
     justify-content: center;
     align-items: center;
   }
+  .style_course_button {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .list {
     width: 100;
     height: 200;
+  }
+  .apply1 {
+    padding: 10px;
+  }
+  .apply2 {
+    padding: 8px;
+  }
+  .header {
+    margin-right: 50px;
   }
 }

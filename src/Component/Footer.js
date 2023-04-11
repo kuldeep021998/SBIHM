@@ -15,7 +15,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Footer() {
-  const [anchorEl, setAnchorEl] = useState(null);
   const [openDegree, setOpenDegree] = useState(false);
   const [openCertificate, setOpenCertificate] = useState(false);
   const [openDiploma, setOpenDiploma] = useState(false);
