@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../style.css";
+import { BsDot } from "react-icons/bs";
 export default function C3() {
   const mySlider = createRef();
 
@@ -45,41 +46,47 @@ export default function C3() {
     ],
   };
 
-  const data = [
+  const curriculam = [
     {
       id: 1,
       main: "1st Year",
-      text1: "Communicative English",
-      text2: "Front Office Management",
-      text3: "House Keeping Management",
-      text4: "Hotel Administration",
-      text5: "Tourism Management",
-      text6: "Front Office Management (P)",
-      text7: "House Keeping Management (P)",
+      data: [
+        "Communicative English",
+        "Front Office Management",
+        "House Keeping Management",
+        "Hotel Administration",
+        "Tourism Management",
+        "Front Office Management (P)",
+        "House Keeping Management (P)",
+      ],
     },
     {
       id: 2,
       main: "2nd Year",
-      text1: "Food Production",
-      text2: "Food and Beverage Service",
-      text3: "Food Safety and Microbiology",
-      text4: "Computer Applications",
-      text5: "Food Production (P)",
-      text6: "Food and Beverage Service (P)",
+      data: [
+        "Food Production",
+        "Food and Beverage Service",
+        "Food Safety and Microbiology",
+        "Computer Applications",
+        "Food Production (P)",
+        "Food and Beverage Service (P)",
+      ],
     },
     {
       id: 3,
       main: "3rd Year",
-      text1: "Food and Beverage Management",
-      text2: "Hotel Accounts",
-      text3: "HR Management in Hospitality Industry",
-      text4: "Entrepreneurship Management",
-      text5: "Industrial Training",
+      data: [
+        "Food and Beverage Management",
+        "Hotel Accounts",
+        "HR Management in Hospitality Industry",
+        "Entrepreneurship Management",
+        "Industrial Training",
+      ],
     },
   ];
 
   const cards = () => {
-    return data.map((item) => {
+    return curriculam.map((item) => {
       return (
         <Grid
           sx={{
@@ -96,7 +103,7 @@ export default function C3() {
               backgroundColor: "#1E73BE14",
               padding: "5%",
               width: "90%",
-              height: 200,
+              height: 220,
               borderRadius: "10px",
             }}
           >
@@ -114,114 +121,26 @@ export default function C3() {
             >
               {item.main}
             </div>
-            <div>
-              <ul style={{ color: "#1E73BE" }}>
-                <li>
-                  <Typography
+            <div style={{ marginLeft: "15px", marginTop: "10px" }}>
+              {item.data.map((itm) => (
+                <div style={{ display: "flex" }}>
+                  <div>
+                    <BsDot color="#1E73BE" size={"20px"} />
+                  </div>
+                  <div
                     style={{
                       fontFamily: "DM Sans",
                       fontSize: "18px",
                       fontWeight: 400,
                       lineHeight: "20px",
                       letterSpacing: "0em",
-                      textAlign: "left",
                       color: "#0A253D",
                     }}
                   >
-                    {item.text1}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text2}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text3}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text4}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text5}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text6}
-                  </Typography>
-                </li>
-                <li>
-                  <Typography
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "18px",
-                      fontWeight: 400,
-                      lineHeight: "20px",
-                      letterSpacing: "0em",
-                      textAlign: "left",
-                      color: "#0A253D",
-                    }}
-                  >
-                    {item.text7}
-                  </Typography>
-                </li>
-              </ul>
+                    {itm}
+                  </div>
+                </div>
+              ))}
             </div>
           </Box>
         </Grid>
