@@ -103,7 +103,7 @@ export default function C3() {
               backgroundColor: "#1E73BE14",
               padding: "5%",
               width: "90%",
-              height: 220,
+              height: 250,
               borderRadius: "10px",
             }}
           >
@@ -123,9 +123,19 @@ export default function C3() {
             </div>
             <div style={{ marginLeft: "15px", marginTop: "10px" }}>
               {item.data.map((itm) => (
-                <div style={{ display: "flex" }}>
-                  <div>
-                    <BsDot color="#1E73BE" size={"20px"} />
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <BsDot color="#1E73BE" size={"30px"} />
                   </div>
                   <div
                     style={{

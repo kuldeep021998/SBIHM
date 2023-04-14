@@ -375,7 +375,7 @@ export default function C2() {
           <div
             style={{
               width: "100%",
-              height: "1px",
+              height: "0.1px",
               backgroundColor: "white",
               marginTop: "10px",
               marginBottom: "40px",
