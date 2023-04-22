@@ -1,13 +1,4 @@
-import {
-  Grid,
-  MenuItem,
-  Paper,
-  MenuList,
-  ListItemText,
-  Button,
-  Typography,
-  Hidden,
-} from "@mui/material";
+import { Grid, MenuItem, Button, Typography, Hidden } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { KeyboardArrowDown } from "@mui/icons-material";
@@ -20,10 +11,6 @@ import Select from "@mui/material/Select";
 import { Divider } from "@mui/material";
 export default function Header() {
   const [status, setStatus] = useState(false);
-
-  const [openDegree, setOpenDegree] = useState(false);
-  const [openCertificate, setOpenCertificate] = useState(false);
-  const [openDiploma, setOpenDiploma] = useState(false);
 
   const degrees = [
     "Bachelor Degree in Hotel Management",
@@ -149,7 +136,7 @@ export default function Header() {
             alignItems: "center",
             justifyContent: "flex-start",
             padding: "5px",
-            cursor: 'pointer',
+            cursor: "pointer",
           }}
           onClick={() => navigate("/")}
         >
@@ -209,7 +196,6 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
             }}
-            onClick={() => setOpenDegree(!openDegree)}
           >
             <InputLabel
               style={{
@@ -257,7 +243,6 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
             }}
-            onClick={() => setOpenDegree(!openDegree)}
           >
             <InputLabel
               style={{
@@ -305,7 +290,6 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
             }}
-            onClick={() => setOpenDegree(!openDegree)}
           >
             <InputLabel
               style={{
