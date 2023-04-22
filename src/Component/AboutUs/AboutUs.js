@@ -12,7 +12,7 @@ export default function AboutUs() {
       <Grid xs={12} lg={12} sm={12}>
         <Header />
       </Grid>
-      <Grid item xs={12} sx={{ marginTop: 5 }}>
+      <Grid item xs={12} sx={{ marginTop: 5, marginBottom: 5 }}>
         <Typography
           style={{
             fontFamily: "Noto Serif",

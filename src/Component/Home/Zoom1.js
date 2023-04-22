@@ -30,7 +30,7 @@ export default function Zoom1() {
       <Grid
         lg={3}
         xs={12}
-        className="Stylesheet_trendingimg"
+        className="img"
         sx={{
           display: "flex",
           alignItems: "center",
@@ -82,7 +82,7 @@ export default function Zoom1() {
       <Grid
         lg={3}
         xs={12}
-        className="Stylesheet_trendingimg"
+        className="img"
         sx={{
           display: "flex",
           alignItems: "center",
@@ -132,7 +132,7 @@ export default function Zoom1() {
       </Grid>
 
       <Grid
-        className="Stylesheet_trendingimg"
+        className="img"
         lg={3}
         xs={12}
         sx={{

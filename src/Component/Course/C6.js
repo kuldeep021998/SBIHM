@@ -1,6 +1,8 @@
 import { Grid, Typography, Hidden, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function C6() {
+  const navigate = useNavigate();
   return (
     <Grid
       container
@@ -52,6 +54,7 @@ export default function C6() {
           }}
         >
           <Button
+            onClick={() => navigate("/ContactUs")}
             variant="outlined"
             style={{
               borderColor: "black",
@@ -70,6 +73,7 @@ export default function C6() {
             Talk to Institute
           </Button>
           <Button
+            onClick={() => navigate("/ApplyPage")}
             style={{
               borderColor: "black",
               borderRadius: "30px",
@@ -114,6 +118,7 @@ export default function C6() {
               color: "#0A253D",
               textAlign: "center",
             }}
+            onClick={() => navigate("/ContactUs")}
           >
             Talk to Institute
           </Button>
@@ -132,6 +137,7 @@ export default function C6() {
               textAlign: "center",
             }}
             variant="contained"
+            onClick={() => navigate("/ApplyPage")}
           >
             Apply Now
           </Button>

@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import '../../style.css';
+import "../../style.css";
 
 export default function Zoom2() {
   return (
@@ -30,7 +30,7 @@ export default function Zoom2() {
       <Grid
         lg={2}
         xs={12}
-        className="Stylesheet_trendingimg"
+        className="img"
         sx={{
           display: "flex",
           alignItems: "center",
@@ -82,7 +82,7 @@ export default function Zoom2() {
       <Grid
         lg={2}
         xs={12}
-        className="Stylesheet_trendingimg"
+        className="img"
         sx={{
           display: "flex",
           alignItems: "center",
@@ -132,7 +132,7 @@ export default function Zoom2() {
       </Grid>
 
       <Grid
-        className="Stylesheet_trendingimg"
+        className="img"
         lg={2}
         xs={12}
         sx={{
@@ -273,7 +273,7 @@ export default function Zoom2() {
       <Grid
         lg={2}
         xs={12}
-        className="Stylesheet_trendingimg"
+        className="img"
         sx={{
           display: "flex",
           alignItems: "center",

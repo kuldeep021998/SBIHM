@@ -20,8 +20,9 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(true);
 
   const courses = [
@@ -135,6 +136,7 @@ export default function Home() {
                   marginTop: "10px",
                   marginBottom: "10px",
                 }}
+               onClick={()=>navigate('/ApplyPage')}
               >
                 Apply Now
               </Button>

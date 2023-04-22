@@ -1,9 +1,11 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
-import { Button, TextField, Grid } from "@mui/material";
+import { Button, TextField, Grid, Box, List, Divider } from "@mui/material";
 import { useState, useEffect } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useNavigate } from "react-router-dom";
+import CancelIcon from "@mui/icons-material/Cancel";
+import ListItemIcon from "@mui/material/ListItemIcon";
 export default function Abc(props) {
   const navigate = useNavigate();
   const [openDegree, setOpenDegree] = useState(false);
@@ -62,203 +64,232 @@ export default function Abc(props) {
   };
 
   const list = (anchor) => (
-    <Grid
-      container
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <Grid sx={{ marginTop: "15px" }}>
-        <div
+    <Box sx={{ padding: "10px" }}>
+      <List>
+        {/* <div
           style={{
-            justifyContent: "center",
             display: "flex",
-            alignItems: "center",
-            fontFamily: "DM Sans",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "24px",
-            letterSpacing: "0.02em",
-            color: "#0A253D",
+            justifyContent: "right",
+            marginBottom: "10px",
           }}
         >
-          Degree Courses
-          <KeyboardArrowDownIcon
-            onClick={() => setOpenDegree(!openDegree)}
-            fontSize="small"
-            style={{ marginLeft: "40px" }}
-          />
+          <ListItemIcon
+            style={{
+              justifyContent: "right",
+            }}
+          >
+            <CancelIcon onClick={toggleDrawer("right", false)} />
+          </ListItemIcon>
+        </div> */}
+        <div
+          onClick={() => setOpenDegree(!openDegree)}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            cursor: "pointer",
+          }}
+        >
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+              fontFamily: "DM Sans",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              color: "#0A253D",
+            }}
+          >
+            Degree Courses
+          </div>
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <KeyboardArrowDownIcon fontSize="small" />
+          </div>
         </div>
-        <div>
+        <div style={{ marginLeft: "10px", marginTop: "10px" }}>
           {openDegree && (
             <div>
-              <ul>
-                {degrees.map((item) => (
-                  <div
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "16px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {item}
+              {degrees.map((item) => (
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "14px",
+                    marginBottom: "10px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => navigate("CoursePage")}
+                >
+                  {item}
+                  <div style={{ marginTop: "2px" }}>
+                    <Divider />
                   </div>
-                ))}
-              </ul>
+                </div>
+              ))}
             </div>
           )}
         </div>
-      </Grid>
 
-      <div
-        style={{
-          height: "2px",
-          width: "100%",
-          backgroundColor: "grey",
-          marginBottom: "10px",
-          marginTop: "5px",
-        }}
-      ></div>
-
-      <Grid sx={{ padding: "5px" }}>
         <div
           style={{
-            justifyContent: "center",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "grey",
+            marginBottom: "10px",
+            marginTop: "5px",
+          }}
+        ></div>
+
+        <div
+          onClick={() => setOpenCertificate(!openCertificate)}
+          style={{
             display: "flex",
-            alignItems: "center",
-            fontFamily: "DM Sans",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "24px",
-            letterSpacing: "0.02em",
-            textAlign: "left",
-            color: "#0A253D",
+            justifyContent: "space-between",
+            cursor: "pointer",
           }}
         >
-          Certificate Courses
-          <KeyboardArrowDownIcon
-            onClick={() => setOpenCertificate(!openCertificate)}
-            fontSize="small"
-            style={{ marginLeft: "15px" }}
-          />
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+              fontFamily: "DM Sans",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              color: "#0A253D",
+            }}
+          >
+            Certificate Courses
+          </div>
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <KeyboardArrowDownIcon fontSize="small" />
+          </div>
         </div>
-        <div>
+        <div style={{ marginLeft: "10px", marginTop: "10px" }}>
           {openCertificate && (
             <div>
-              <ul>
-                {certificates.map((certificate) => (
-                  <div
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "16px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {certificate}
+              {certificates.map((certificate) => (
+                <div
+                  style={{
+                    fontFamily: "DM Sans",
+                    fontSize: "16px",
+                    marginBottom: "10px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => navigate("CoursePage")}
+                >
+                  {certificate}
+                  <div style={{ marginTop: "2px" }}>
+                    <Divider />
                   </div>
-                ))}
-              </ul>
+                </div>
+              ))}
             </div>
           )}
         </div>
-      </Grid>
 
-      <div
-        style={{
-          height: "2px",
-          width: "100%",
-          backgroundColor: "grey",
-          marginBottom: "10px",
-        }}
-      ></div>
-      <Grid sx={{ padding: "5px" }}>
         <div
           style={{
-            justifyContent: "center",
-            display: "flex",
-            alignItems: "center",
-            fontFamily: "DM Sans",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "24px",
-            letterSpacing: "0.02em",
-            textAlign: "left",
-            color: "#0A253D",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "grey",
+            marginBottom: "10px",
           }}
-        >
-          Diploma Courses
-          <KeyboardArrowDownIcon
-            onClick={() => setOpenDiploma(!openDiploma)}
-            fontSize="small"
-            style={{ marginLeft: "30px" }}
-          />
-        </div>
-        <div>
-          {openDiploma && (
-            <div>
-              <ul>
-                {diplomas.map((item) => (
-                  <div
-                    style={{
-                      fontFamily: "DM Sans",
-                      fontSize: "16px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {item}
-                  </div>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </Grid>
+        ></div>
+        {/* <Grid sx={{ padding: "5px" }}>
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              alignItems: "center",
+              fontFamily: "DM Sans",
+              fontSize: "16px",
+              fontWeight: 400,
+              lineHeight: "24px",
+              letterSpacing: "0.02em",
+              textAlign: "left",
+              color: "#0A253D",
+            }}
+          >
+            Diploma Courses
+            <KeyboardArrowDownIcon
+              onClick={() => setOpenDiploma(!openDiploma)}
+              fontSize="small"
+              style={{ marginLeft: "30px" }}
+            />
+          </div>
+          <div>
+            {openDiploma && (
+              <div>
+                <ul>
+                  {diplomas.map((item) => (
+                    <div
+                      style={{
+                        fontFamily: "DM Sans",
+                        fontSize: "16px",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </Grid> */}
 
-      <div
-        style={{
-          height: "2px",
-          width: "100%",
-          backgroundColor: "grey",
-          marginBottom: "20px",
-        }}
-      ></div>
-
-      <Grid
-        sx={{
-          marginTop: "10px",
-          // bgcolor: "white",
-        }}
-      >
-        <Button
-          fullWidth
-          variant="outlined"
-          style={{
-            borderRadius: 50,
-            marginRight: 10,
-            color: "#0A253D",
-            borderColor: "#0A253D",
-          }}
-          onClick={() => navigate("./ContactUs")}
-        >
-          Contact Us
-        </Button>
-
-        <Button
-          fullWidth
-          onClick={() => navigate("./ApplyPage")}
-          variant="outlined"
-          style={{
-            borderRadius: 50,
+        <Grid
+          sx={{
             marginTop: "10px",
-            borderColor: "#0A253D",
-            color: "#0A253D",
+            // bgcolor: "white",
           }}
         >
-          Apply now
-        </Button>
-      </Grid>
-    </Grid>
+          <Button
+            fullWidth
+            variant="outlined"
+            style={{
+              borderRadius: 50,
+              marginRight: 10,
+              color: "#0A253D",
+              borderColor: "#0A253D",
+            }}
+            onClick={() => navigate("./ContactUs")}
+          >
+            Contact Us
+          </Button>
+
+          <Button
+            fullWidth
+            onClick={() => navigate("./ApplyPage")}
+            variant="outlined"
+            style={{
+              borderRadius: 50,
+              marginTop: "10px",
+              borderColor: "#0A253D",
+              color: "#0A253D",
+            }}
+          >
+            Apply now
+          </Button>
+        </Grid>
+      </List>
+    </Box>
   );
 
   return (

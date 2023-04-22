@@ -1,7 +1,9 @@
 import { Grid, Button, Typography } from "@mui/material";
 import "../../style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function C1() {
+  const navigate = useNavigate();
   return (
     <Grid container sx={{ backgroundColor: "#1E73BE14" }}>
       <Grid xs={12} md={6} lg={6} sx={{ padding: 10 }}>
@@ -64,6 +66,7 @@ export default function C1() {
             About the Course
           </Button>
           <Button
+            onClick={() => navigate("/ApplyPage")}
             sx={{ borderRadius: 15, marginTop: "10px", width: "70%" }}
             size="small"
             fullWidth

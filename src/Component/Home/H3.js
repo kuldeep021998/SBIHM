@@ -11,7 +11,7 @@ export default function H3() {
         padding: 20,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        // alignItems: "center",
       }}
       container
     >

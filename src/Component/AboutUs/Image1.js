@@ -5,6 +5,7 @@ export default function Images1() {
     <Grid container>
       <Grid
         lg={4}
+        xs={12}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <img
@@ -17,6 +18,7 @@ export default function Images1() {
       </Grid>
       <Grid
         lg={4}
+        xs={12}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <img
@@ -28,6 +30,7 @@ export default function Images1() {
       </Grid>
       <Grid
         lg={4}
+        xs={12}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
         <img
