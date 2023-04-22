@@ -132,7 +132,6 @@ export default function Zoom2() {
       </Grid>
 
       <Grid
-        className="img"
         lg={2}
         xs={12}
         sx={{
