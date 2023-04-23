@@ -229,7 +229,7 @@ export default function Header() {
                     marginBottom: "10px",
                     cursor: "pointer",
                   }}
-                  onClick={() => navigate("CoursePage")}
+                  onClick={() => navigate("/CoursePage")}
                 >
                   {item}
                 </MenuItem>
@@ -276,7 +276,7 @@ export default function Header() {
                     marginBottom: "10px",
                     cursor: "pointer",
                   }}
-                  onClick={() => navigate("CoursePage")}
+                  onClick={() => navigate("/CoursePage")}
                 >
                   {item}
                 </MenuItem>
@@ -323,7 +323,7 @@ export default function Header() {
                     marginBottom: "10px",
                     cursor: "pointer",
                   }}
-                  onClick={() => navigate("CoursePage")}
+                  onClick={() => navigate("/CoursePage")}
                 >
                   {item}
                 </MenuItem>
